@@ -35,19 +35,50 @@ function filteredPredictions() {
 }
 
 function renderSummary(rows) {
-  const winsLocal = rows.filter((r) => r.signo === '1').length;
-  const draws = rows.filter((r) => r.signo === 'X').length;
-  const winsAway = rows.filter((r) => r.signo === '2').length;
+  const played = rows.filter((r) => r.played);
+  const hits1x2 = played.filter((r) => r.hit_1x2).length;
+  const hitsExact = played.filter((r) => r.hit_exact).length;
   $('summaryStrip').innerHTML = `
     <div class="summary-item"><b>${rows.length}</b><span>partidos visibles</span></div>
-    <div class="summary-item"><b>${winsLocal}</b><span>victorias local</span></div>
-    <div class="summary-item"><b>${draws}</b><span>empates</span></div>
-    <div class="summary-item"><b>${winsAway}</b><span>victorias visitante</span></div>
+    <div class="summary-item"><b>${played.length}</b><span>con resultado real</span></div>
+    <div class="summary-item"><b>${hits1x2}</b><span>aciertos 1X2</span></div>
+    <div class="summary-item"><b>${hitsExact}</b><span>resultados exactos</span></div>
   `;
+}
+
+function actualStatusHtml(p) {
+  if (!p.played) {
+    return '<span class="status pending">Sin resultado real todavía</span>';
+  }
+  const oneXtwo = p.hit_1x2 ? '✅ 1X2' : '❌ 1X2';
+  const exact = p.hit_exact ? '🎯 exacto' : '❌ exacto';
+  return `<span class="status actual">Real: ${p.actual_resultado}</span><span class="status ${p.hit_1x2 ? 'ok' : 'bad'}">${oneXtwo}</span><span class="status ${p.hit_exact ? 'exact' : 'bad'}">${exact}</span>`;
+}
+
+function renderStandings() {
+  const standings = state.data.standings || [];
+  const selected = state.person;
+  const medalMap = { 1: '🥇', 2: '🥈', 3: '🥉' };
+  $('standingsTable').innerHTML = standings.map((row) => `
+    <button class="standing-row ${row.persona === selected ? 'selected' : ''}" data-person="${row.persona}">
+      <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
+      <span class="standing-name">${row.persona}</span>
+      <span class="standing-points">${row.points}<small>pts</small></span>
+      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span></span>
+    </button>
+  `).join('');
+  document.querySelectorAll('.standing-row').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.person = button.dataset.person;
+      $('personSelect').value = state.person;
+      renderTimeline();
+    });
+  });
 }
 
 function renderTimeline() {
   const rows = filteredPredictions();
+  renderStandings();
   renderSummary(rows);
   const timeline = $('timeline');
   timeline.innerHTML = '';
@@ -70,7 +101,7 @@ function renderTimeline() {
     node.querySelector('.away').textContent = p.visitante;
     node.querySelector('.local-goals').textContent = p.goles_local;
     node.querySelector('.away-goals').textContent = p.goles_visitante;
-    node.querySelector('.prediction-line').innerHTML = `<strong>${p.persona}</strong> puso <strong>${p.resultado}</strong> · ${predictionText(p)}`;
+    node.querySelector('.prediction-line').innerHTML = `<strong>${p.persona}</strong> puso <strong>${p.resultado}</strong> · ${predictionText(p)} <span class="status-row">${actualStatusHtml(p)}</span>`;
     timeline.appendChild(node);
   }
 }

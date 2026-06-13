@@ -39,9 +39,24 @@
       </div>
     </section>
 
-    <section class="summary-strip" id="summaryStrip"></section>
+    <div class="content-grid">
+      <aside class="standings-card" aria-label="Clasificación">
+        <div class="standings-head">
+          <div>
+            <p class="eyebrow mini">Clasificación</p>
+            <h2>Ranking por puntos</h2>
+          </div>
+          <p class="scoring-note">Fase de grupos: 4 pts por signo 1X2 + 2 pts por resultado exacto.</p>
+        </div>
+        <div class="standings-table" id="standingsTable"></div>
+      </aside>
 
-    <section class="timeline" id="timeline" aria-live="polite"></section>
+      <div class="results-column">
+        <section class="summary-strip" id="summaryStrip"></section>
+
+        <section class="timeline" id="timeline" aria-live="polite"></section>
+      </div>
+    </div>
   </main>
 
   <template id="matchTemplate">
