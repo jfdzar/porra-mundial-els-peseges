@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porra Mundial 2026 · Predicciones fase de grupos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Porra Mundial 2026</p>
+      <h1>Predicciones de la fase de grupos</h1>
+      <p class="subtitle">Selecciona una persona y revisa, por orden cronológico, qué resultado ha puesto en cada partido.</p>
+    </div>
+    <div class="hero-card">
+      <span id="statPeople">14</span>
+      <small>participantes</small>
+      <span id="statMatches">72</span>
+      <small>partidos</small>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="controls" aria-label="Filtros">
+      <label class="field">
+        <span>Participante</span>
+        <select id="personSelect"></select>
+      </label>
+      <label class="field search-field">
+        <span>Buscar partido o selección</span>
+        <input id="searchInput" type="search" placeholder="Ej. España, México, Francia…" />
+      </label>
+      <div class="chips" role="group" aria-label="Filtrar por jornada">
+        <button class="chip active" data-round="all">Todas</button>
+        <button class="chip" data-round="J1">J1</button>
+        <button class="chip" data-round="J2">J2</button>
+        <button class="chip" data-round="J3">J3</button>
+      </div>
+    </section>
+
+    <section class="summary-strip" id="summaryStrip"></section>
+
+    <section class="timeline" id="timeline" aria-live="polite"></section>
+  </main>
+
+  <template id="matchTemplate">
+    <article class="match-card">
+      <div class="date-rail">
+        <span class="date-day"></span>
+        <span class="date-time"></span>
+      </div>
+      <div class="match-body">
+        <div class="match-meta">
+          <span class="badge group-badge"></span>
+          <span class="badge jornada-badge"></span>
+          <span class="order"></span>
+        </div>
+        <div class="teams">
+          <div class="team local"></div>
+          <div class="score-pill">
+            <span class="goals local-goals"></span>
+            <span class="dash">–</span>
+            <span class="goals away-goals"></span>
+          </div>
+          <div class="team away"></div>
+        </div>
+        <div class="prediction-line"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
