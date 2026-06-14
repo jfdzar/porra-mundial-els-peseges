@@ -230,7 +230,7 @@ h2 { margin: 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.05em; }
 .timeline { display: grid; gap: 14px; }
 .match-card {
   display: grid;
-  grid-template-columns: 108px minmax(0, 1fr);
+  grid-template-columns: 132px minmax(0, 1fr);
   gap: 16px;
   background: var(--card-strong);
   border: 1px solid var(--line);
