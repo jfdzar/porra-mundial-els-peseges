@@ -129,23 +129,24 @@ def collect_finished_results():
             'zafronix_as_of': source_payload.get('asOf'),
         }
 
-    # Fallback/extra source for recently finished or live matches that already have scores.
+    # Fallback/extra source for recently finished matches only.
+    # Do NOT import the `live` section: those scores are provisional while
+    # the match is still in play and must not count in the standings.
     live_payload = fetch_json(ZAFRONIX_LIVE)
-    for section in ('recentlyFinished', 'live'):
-        for item in live_payload.get(section, []):
-            if item.get('homeScore') is None or item.get('awayScore') is None:
-                continue
-            if (item.get('status') or '').lower() not in {'finished', 'final', 'live'}:
-                continue
-            key = partido_key(item.get('homeTeam'), item.get('awayTeam'))
-            results.setdefault(key, {
-                'goles_local': int(item['homeScore']),
-                'goles_visitante': int(item['awayScore']),
-                'source': ZAFRONIX_LIVE,
-                'zafronix_match_no': item.get('matchNo'),
-                'zafronix_label': item.get('matchId'),
-                'zafronix_as_of': live_payload.get('asOf'),
-            })
+    for item in live_payload.get('recentlyFinished', []):
+        if item.get('homeScore') is None or item.get('awayScore') is None:
+            continue
+        if (item.get('status') or '').lower() not in {'finished', 'final'}:
+            continue
+        key = partido_key(item.get('homeTeam'), item.get('awayTeam'))
+        results.setdefault(key, {
+            'goles_local': int(item['homeScore']),
+            'goles_visitante': int(item['awayScore']),
+            'source': ZAFRONIX_LIVE,
+            'zafronix_match_no': item.get('matchNo'),
+            'zafronix_label': item.get('matchId'),
+            'zafronix_as_of': live_payload.get('asOf'),
+        })
     return results
 
 
