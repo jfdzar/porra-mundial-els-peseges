@@ -25,12 +25,20 @@ function predictionText(p) {
   return signMap[p.signo] || 'sin signo';
 }
 
+function roundLabel(round) {
+  return round === 'all' ? 'Todas' : round;
+}
+
+function matchPhaseLabel(p) {
+  return p.is_knockout ? 'Eliminatorias' : `Grupo ${p.grupo}`;
+}
+
 function filteredPredictions() {
   const q = normalize(state.query);
   return state.data.predictions
     .filter((p) => p.persona === state.person)
     .filter((p) => state.round === 'all' || p.jornada === state.round)
-    .filter((p) => !q || normalize(`${p.partido} ${p.local} ${p.visitante} ${p.grupo} ${p.jornada}`).includes(q))
+    .filter((p) => !q || normalize(`${p.partido} ${p.local} ${p.visitante} ${p.grupo} ${p.jornada} ${p.fase || ''}`).includes(q))
     .sort((a, b) => Number(a.chronological_order) - Number(b.chronological_order));
 }
 
@@ -94,7 +102,7 @@ function renderTimeline() {
     const date = formatDateParts(p.datetime_label);
     node.querySelector('.date-day').textContent = date.day;
     node.querySelector('.date-time').textContent = date.time;
-    node.querySelector('.group-badge').textContent = `Grupo ${p.grupo}`;
+    node.querySelector('.group-badge').textContent = matchPhaseLabel(p);
     node.querySelector('.jornada-badge').textContent = p.jornada;
     node.querySelector('.order').textContent = `#${p.chronological_order}`;
     node.querySelector('.local').textContent = p.local;
@@ -119,6 +127,8 @@ function initControls() {
     state.query = event.target.value;
     renderTimeline();
   });
+  const rounds = state.data.rounds || ['all', 'J1', 'J2', 'J3'];
+  $('roundChips').innerHTML = rounds.map((round) => `<button class="chip ${round === state.round ? 'active' : ''}" data-round="${round}">${roundLabel(round)}</button>`).join('');
   document.querySelectorAll('.chip').forEach((button) => {
     button.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach((b) => b.classList.remove('active'));
@@ -130,7 +140,7 @@ function initControls() {
 }
 
 async function main() {
-  const response = await fetch('data.json');
+  const response = await fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' });
   if (!response.ok) throw new Error(`No se pudo cargar data.json (${response.status})`);
   state.data = await response.json();
   $('statPeople').textContent = state.data.people.length;

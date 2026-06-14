@@ -108,7 +108,7 @@ select, input {
   transition: border .15s, box-shadow .15s;
 }
 select:focus, input:focus { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(36,87,255,.12); }
-.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chips { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
 .chip {
   border: 1px solid var(--line);
   background: #fff;

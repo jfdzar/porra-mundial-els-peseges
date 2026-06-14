@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Porra Mundial 2026 · Predicciones fase de grupos</title>
+  <title>Porra Mundial 2026 · Predicciones</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
     <div>
       <p class="eyebrow">Porra Mundial 2026</p>
-      <h1>Predicciones de la fase de grupos</h1>
-      <p class="subtitle">Selecciona una persona y revisa, por orden cronológico, qué resultado ha puesto en cada partido.</p>
+      <h1>Predicciones del Mundial 2026</h1>
+      <p class="subtitle">Selecciona una persona y revisa, por orden, qué resultado ha puesto en fase de grupos y eliminatorias.</p>
     </div>
     <div class="hero-card">
       <span id="statPeople">14</span>
@@ -31,11 +31,8 @@
         <span>Buscar partido o selección</span>
         <input id="searchInput" type="search" placeholder="Ej. España, México, Francia…" />
       </label>
-      <div class="chips" role="group" aria-label="Filtrar por jornada">
+      <div class="chips" id="roundChips" role="group" aria-label="Filtrar por jornada o ronda">
         <button class="chip active" data-round="all">Todas</button>
-        <button class="chip" data-round="J1">J1</button>
-        <button class="chip" data-round="J2">J2</button>
-        <button class="chip" data-round="J3">J3</button>
       </div>
     </section>
 
@@ -46,7 +43,7 @@
             <p class="eyebrow mini">Clasificación</p>
             <h2>Ranking por puntos</h2>
           </div>
-          <p class="scoring-note">Fase de grupos: 4 pts por signo 1X2 + 2 pts por resultado exacto.</p>
+          <p class="scoring-note">Fase de grupos: 4 pts por signo 1X2 + 2 pts por resultado exacto. Eliminatorias: visibles en esta prueba local, todavía sin sumar al ranking.</p>
         </div>
         <div class="standings-table" id="standingsTable"></div>
       </aside>
@@ -85,6 +82,6 @@
     </article>
   </template>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=local-ko-1"></script>
 </body>
 </html>
