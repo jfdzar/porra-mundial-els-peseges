@@ -150,16 +150,28 @@ def collect_finished_results():
 
 
 def merge_results(data, actual_results):
-    known_partidos = {m['partido'] for m in data['matches']}
+    # Only real group-stage fixtures should be scored right now. Knockout rows
+    # are participant-specific projected brackets, so they must remain visible
+    # but unscored until Juan defines knockout scoring rules.
+    group_matches = [m for m in data['matches'] if not m.get('is_knockout')]
+    known_partidos = {m['partido'] for m in group_matches}
     unknown = sorted(set(actual_results) - known_partidos)
     if unknown:
-        print('Aviso: resultados de Zafronix no encontrados en la porra:')
+        print('Aviso: resultados de Zafronix no encontrados en la fase de grupos de la porra:')
         for key in unknown:
             print(f'  - {key}')
 
     valid_results = {k: v for k, v in actual_results.items() if k in known_partidos}
 
     for match in data['matches']:
+        if match.get('is_knockout'):
+            match['played'] = False
+            match['actual_goles_local'] = None
+            match['actual_goles_visitante'] = None
+            match['actual_resultado'] = None
+            match['actual_signo'] = None
+            match['actual_source'] = None
+            continue
         actual = valid_results.get(match['partido'])
         if actual:
             gl = int(actual['goles_local'])
@@ -178,8 +190,18 @@ def merge_results(data, actual_results):
             match['actual_signo'] = None
             match['actual_source'] = None
 
-    matches_by_name = {m['partido']: m for m in data['matches']}
+    matches_by_name = {m['partido']: m for m in group_matches}
     for prediction in data['predictions']:
+        if prediction.get('is_knockout'):
+            prediction['played'] = False
+            prediction['actual_resultado'] = None
+            prediction['actual_signo'] = None
+            prediction['hit_1x2'] = None
+            prediction['hit_exact'] = None
+            prediction['points_1x2'] = 0
+            prediction['points_exact'] = 0
+            prediction['points_total'] = 0
+            continue
         match = matches_by_name[prediction['partido']]
         prediction['played'] = match['played']
         prediction['actual_resultado'] = match['actual_resultado']
@@ -199,6 +221,8 @@ def merge_results(data, actual_results):
 
     standings = {}
     for prediction in data['predictions']:
+        if prediction.get('is_knockout'):
+            continue
         person = prediction['persona']
         row = standings.setdefault(person, {
             'persona': person,
