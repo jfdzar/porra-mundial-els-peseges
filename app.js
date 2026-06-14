@@ -39,6 +39,49 @@ function roundLabel(round) {
   return round === 'all' ? 'Todas' : round;
 }
 
+function daysSinceEpochInMadrid() {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Madrid',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return Math.floor(Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day)) / 86400000);
+}
+
+function normalizeQuote(raw) {
+  if (typeof raw === 'string') {
+    return { texto: raw, autor: '' };
+  }
+  return {
+    texto: raw?.texto || raw?.text || raw?.frase || raw?.quote || '',
+    autor: raw?.autor || raw?.author || '',
+  };
+}
+
+async function renderDailyQuote() {
+  const quoteBox = $('dailyQuote');
+  if (!quoteBox) return;
+
+  try {
+    const response = await fetch(`frases.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`No se pudo cargar frases.json (${response.status})`);
+    const rawQuotes = await response.json();
+    const quotes = (Array.isArray(rawQuotes) ? rawQuotes : rawQuotes.frases || rawQuotes.quotes || [])
+      .map(normalizeQuote)
+      .filter((quote) => quote.texto);
+    if (!quotes.length) return;
+
+    const quote = quotes[daysSinceEpochInMadrid() % quotes.length];
+    $('dailyQuoteText').textContent = `“${quote.texto}”`;
+    $('dailyQuoteAuthor').textContent = quote.autor ? quote.autor : '';
+    quoteBox.hidden = false;
+  } catch (error) {
+    console.warn('No se pudo cargar la frase del día', error);
+  }
+}
+
 function matchPhaseLabel(p) {
   return p.is_knockout ? 'Eliminatorias' : `Grupo ${p.grupo}`;
 }
@@ -239,6 +282,7 @@ async function main() {
   state.data = await response.json();
   $('statPeople').textContent = state.data.people.length;
   $('statMatches').textContent = state.data.matches.length;
+  await renderDailyQuote();
   initControls();
   renderTimeline();
 }

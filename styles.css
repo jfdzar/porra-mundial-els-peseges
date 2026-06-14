@@ -55,8 +55,12 @@ h1 {
   font-size: 18px;
   line-height: 1.55;
 }
+.hero-side {
+  min-width: 220px;
+  display: grid;
+  gap: 12px;
+}
 .hero-card {
-  min-width: 170px;
   padding: 22px;
   border: 1px solid var(--line);
   background: var(--card);
@@ -70,6 +74,42 @@ h1 {
 }
 .hero-card span { font-size: 34px; font-weight: 900; letter-spacing: -0.04em; }
 .hero-card small { color: var(--muted); margin-bottom: 8px; }
+.daily-quote {
+  padding: 18px;
+  border: 1px solid rgba(36, 87, 255, .16);
+  background:
+    linear-gradient(145deg, rgba(36, 87, 255, .10), rgba(14, 165, 233, .08)),
+    var(--card);
+  border-radius: 22px;
+  box-shadow: 0 14px 38px rgba(18, 28, 45, .08);
+  backdrop-filter: blur(16px);
+}
+.daily-quote[hidden] { display: none; }
+.daily-quote-label {
+  margin: 0 0 8px;
+  color: var(--brand);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .12em;
+  font-size: 11px;
+}
+.daily-quote blockquote {
+  margin: 0;
+}
+.daily-quote blockquote p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+.daily-quote footer {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: right;
+}
 .shell { max-width: 1180px; margin: 0 auto; padding: 0 24px 72px; }
 .content-grid {
   display: grid;
@@ -346,6 +386,7 @@ h2 { margin: 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.05em; }
 }
 @media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; padding-top: 34px; }
+  .hero-side { min-width: 0; }
   .hero-card { text-align: left; grid-template-columns: auto 1fr; align-items: baseline; }
   .controls { position: static; grid-template-columns: 1fr; }
   .content-grid { grid-template-columns: 1fr; }
