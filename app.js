@@ -27,7 +27,7 @@ function escapeHtml(value) {
 function formatDateParts(label) {
   if (!label) return { day: 'Sin fecha', time: '' };
   const [date, time] = label.split(' ');
-  return { day: date, time };
+  return { day: date, time: time ? `${time} CET` : '' };
 }
 
 function predictionText(p) {
