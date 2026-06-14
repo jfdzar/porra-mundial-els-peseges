@@ -3,6 +3,7 @@ const state = {
   person: null,
   round: 'all',
   query: '',
+  expandedMatchKey: null,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -12,6 +13,15 @@ function normalize(text) {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function formatDateParts(label) {
@@ -31,6 +41,13 @@ function roundLabel(round) {
 
 function matchPhaseLabel(p) {
   return p.is_knockout ? 'Eliminatorias' : `Grupo ${p.grupo}`;
+}
+
+function matchKey(p) {
+  // Group-stage fixtures are shared by everyone, so the match name is enough.
+  // Knockout rows are participant-specific brackets; for now we compare exact
+  // same matchup names when they happen to coincide between participants.
+  return `${p.is_knockout ? 'KO' : 'GR'}|${p.partido}`;
 }
 
 function filteredPredictions() {
@@ -60,7 +77,58 @@ function actualStatusHtml(p) {
   }
   const oneXtwo = p.hit_1x2 ? '✅ 1X2' : '❌ 1X2';
   const exact = p.hit_exact ? '🎯 exacto' : '❌ exacto';
-  return `<span class="status actual">Real: ${p.actual_resultado}</span><span class="status ${p.hit_1x2 ? 'ok' : 'bad'}">${oneXtwo}</span><span class="status ${p.hit_exact ? 'exact' : 'bad'}">${exact}</span>`;
+  return `<span class="status actual">Real: ${escapeHtml(p.actual_resultado)}</span><span class="status ${p.hit_1x2 ? 'ok' : 'bad'}">${oneXtwo}</span><span class="status ${p.hit_exact ? 'exact' : 'bad'}">${exact}</span>`;
+}
+
+function participantPredictionStatus(p) {
+  if (!p.played) return '<span class="mini-status pending">Pendiente</span>';
+  const oneXtwo = p.hit_1x2 ? '<span class="mini-status ok">1X2</span>' : '<span class="mini-status bad">1X2</span>';
+  const exact = p.hit_exact ? '<span class="mini-status exact">Exacto</span>' : '';
+  const points = `<span class="mini-status points">${Number(p.points_total || 0)} pts</span>`;
+  return `${oneXtwo}${exact}${points}`;
+}
+
+function comparisonRowsFor(matchPrediction) {
+  const key = matchKey(matchPrediction);
+  return state.data.predictions
+    .filter((p) => matchKey(p) === key)
+    .sort((a, b) => {
+      if (a.persona === state.person) return -1;
+      if (b.persona === state.person) return 1;
+      return a.persona.localeCompare(b.persona, 'es');
+    });
+}
+
+function renderComparisonHtml(matchPrediction) {
+  const rows = comparisonRowsFor(matchPrediction);
+  const otherCount = Math.max(rows.length - 1, 0);
+  const title = matchPrediction.is_knockout
+    ? `Predicciones para este cruce (${otherCount} más)`
+    : `Predicciones de los participantes (${otherCount} más)`;
+
+  const rowsHtml = rows.map((row) => `
+    <div class="comparison-row ${row.persona === state.person ? 'current-person' : ''}">
+      <span class="comparison-person">${escapeHtml(row.persona)}</span>
+      <span class="comparison-score">${escapeHtml(row.resultado)}</span>
+      <span class="comparison-sign">${escapeHtml(predictionText(row))}</span>
+      <span class="comparison-status">${participantPredictionStatus(row)}</span>
+    </div>
+  `).join('');
+
+  const knockoutHint = matchPrediction.is_knockout && rows.length < state.data.people.length
+    ? '<p class="comparison-hint">En eliminatorias algunos participantes tienen cruces distintos según su bracket, así que aquí solo aparecen quienes tienen este mismo cruce.</p>'
+    : '';
+
+  return `
+    <div class="match-comparison" aria-label="Predicciones de otros participantes">
+      <div class="comparison-head">
+        <strong>${title}</strong>
+        <span>Toca el partido otra vez para cerrar</span>
+      </div>
+      ${rowsHtml}
+      ${knockoutHint}
+    </div>
+  `;
 }
 
 function renderStandings() {
@@ -68,9 +136,9 @@ function renderStandings() {
   const selected = state.person;
   const medalMap = { 1: '🥇', 2: '🥈', 3: '🥉' };
   $('standingsTable').innerHTML = standings.map((row) => `
-    <button class="standing-row ${row.persona === selected ? 'selected' : ''}" data-person="${row.persona}">
+    <button class="standing-row ${row.persona === selected ? 'selected' : ''}" data-person="${escapeHtml(row.persona)}">
       <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
-      <span class="standing-name">${row.persona}</span>
+      <span class="standing-name">${escapeHtml(row.persona)}</span>
       <span class="standing-points">${row.points}<small>pts</small></span>
       <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span></span>
     </button>
@@ -78,6 +146,7 @@ function renderStandings() {
   document.querySelectorAll('.standing-row').forEach((button) => {
     button.addEventListener('click', () => {
       state.person = button.dataset.person;
+      state.expandedMatchKey = null;
       $('personSelect').value = state.person;
       renderTimeline();
     });
@@ -98,7 +167,15 @@ function renderTimeline() {
   for (const p of rows) {
     const node = tpl.content.cloneNode(true);
     const card = node.querySelector('.match-card');
+    const key = matchKey(p);
+    const isExpanded = state.expandedMatchKey === key;
     card.classList.add(`sign-${p.signo}`);
+    card.classList.toggle('expanded', isExpanded);
+    card.dataset.matchKey = key;
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-expanded', String(isExpanded));
+    card.setAttribute('title', 'Haz click para ver las predicciones de los demás');
     const date = formatDateParts(p.datetime_label);
     node.querySelector('.date-day').textContent = date.day;
     node.querySelector('.date-time').textContent = date.time;
@@ -109,31 +186,48 @@ function renderTimeline() {
     node.querySelector('.away').textContent = p.visitante;
     node.querySelector('.local-goals').textContent = p.goles_local;
     node.querySelector('.away-goals').textContent = p.goles_visitante;
-    node.querySelector('.prediction-line').innerHTML = `<strong>${p.persona}</strong> puso <strong>${p.resultado}</strong> · ${predictionText(p)} <span class="status-row">${actualStatusHtml(p)}</span>`;
+    node.querySelector('.prediction-line').innerHTML = `<strong>${escapeHtml(p.persona)}</strong> puso <strong>${escapeHtml(p.resultado)}</strong> · ${escapeHtml(predictionText(p))} <span class="status-row">${actualStatusHtml(p)}</span><span class="open-hint">Ver demás predicciones</span>`;
+    if (isExpanded) {
+      node.querySelector('.match-body').insertAdjacentHTML('beforeend', renderComparisonHtml(p));
+    }
+    card.addEventListener('click', () => {
+      state.expandedMatchKey = state.expandedMatchKey === key ? null : key;
+      renderTimeline();
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        state.expandedMatchKey = state.expandedMatchKey === key ? null : key;
+        renderTimeline();
+      }
+    });
     timeline.appendChild(node);
   }
 }
 
 function initControls() {
   const select = $('personSelect');
-  select.innerHTML = state.data.people.map((p) => `<option value="${p}">${p}</option>`).join('');
+  select.innerHTML = state.data.people.map((p) => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
   state.person = state.data.people.includes('Juan') ? 'Juan' : state.data.people[0];
   select.value = state.person;
   select.addEventListener('change', (event) => {
     state.person = event.target.value;
+    state.expandedMatchKey = null;
     renderTimeline();
   });
   $('searchInput').addEventListener('input', (event) => {
     state.query = event.target.value;
+    state.expandedMatchKey = null;
     renderTimeline();
   });
   const rounds = state.data.rounds || ['all', 'J1', 'J2', 'J3'];
-  $('roundChips').innerHTML = rounds.map((round) => `<button class="chip ${round === state.round ? 'active' : ''}" data-round="${round}">${roundLabel(round)}</button>`).join('');
+  $('roundChips').innerHTML = rounds.map((round) => `<button class="chip ${round === state.round ? 'active' : ''}" data-round="${escapeHtml(round)}">${escapeHtml(roundLabel(round))}</button>`).join('');
   document.querySelectorAll('.chip').forEach((button) => {
     button.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach((b) => b.classList.remove('active'));
       button.classList.add('active');
       state.round = button.dataset.round;
+      state.expandedMatchKey = null;
       renderTimeline();
     });
   });
@@ -151,5 +245,5 @@ async function main() {
 
 main().catch((error) => {
   console.error(error);
-  $('timeline').innerHTML = `<div class="empty">Error cargando la aplicación: ${error.message}</div>`;
+  $('timeline').innerHTML = `<div class="empty">Error cargando la aplicación: ${escapeHtml(error.message)}</div>`;
 });
