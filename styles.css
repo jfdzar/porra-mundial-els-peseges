@@ -251,6 +251,21 @@ h2 { margin: 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.05em; }
   box-shadow: 0 0 0 4px rgba(36,87,255,.14), 0 16px 42px rgba(18, 28, 45, .09);
 }
 .match-card.expanded { border-color: rgba(36,87,255,.42); }
+.match-card.played {
+  background: #eef0f3;
+  border-color: #d0d5dd;
+  box-shadow: 0 8px 22px rgba(18, 28, 45, .045);
+}
+.match-card.played .date-rail {
+  background: linear-gradient(180deg, #667085, #475467);
+}
+.match-card.played .score-pill {
+  background: #e4e7ec;
+}
+.match-card.played .open-hint {
+  background: rgba(102, 112, 133, .14);
+  color: #475467;
+}
 .date-rail {
   background: linear-gradient(180deg, #182033, #27324a);
   color: #fff;

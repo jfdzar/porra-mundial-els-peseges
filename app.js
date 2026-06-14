@@ -213,6 +213,7 @@ function renderTimeline() {
     const key = matchKey(p);
     const isExpanded = state.expandedMatchKey === key;
     card.classList.add(`sign-${p.signo}`);
+    card.classList.toggle('played', Boolean(p.played));
     card.classList.toggle('expanded', isExpanded);
     card.dataset.matchKey = key;
     card.setAttribute('role', 'button');
