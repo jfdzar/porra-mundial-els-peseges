@@ -45,6 +45,7 @@ TEAM_ALIASES = {
     'Ghana': 'Ghana',
     'Haiti': 'Haití',
     'Iran': 'Irán',
+    'IR Iran': 'Irán',
     'Iraq': 'Irak',
     'Japan': 'Japón',
     'Jordan': 'Jordania',
