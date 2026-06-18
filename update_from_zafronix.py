@@ -33,6 +33,7 @@ TEAM_ALIASES = {
     'Canada': 'Canadá',
     'Colombia': 'Colombia',
     "Côte d'Ivoire": 'Costa de Marfil',
+    'Congo DR': 'RD Congo',
     'Croatia': 'Croacia',
     'Curaçao': 'Curazao',
     'Czechia': 'República Checa',
