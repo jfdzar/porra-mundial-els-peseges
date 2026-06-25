@@ -152,10 +152,107 @@ def collect_finished_results():
     return results
 
 
+def result_points_for_match(match):
+    gl = int(match['actual_goles_local'])
+    gv = int(match['actual_goles_visitante'])
+    if gl > gv:
+        return 3, 0
+    if gl < gv:
+        return 0, 3
+    return 1, 1
+
+
+def rank_group_played(matches):
+    table = {}
+    for match in matches:
+        for team in (match['local'], match['visitante']):
+            table.setdefault(team, {'team': team, 'pts': 0, 'gf': 0, 'ga': 0, 'gd': 0})
+        if not match.get('played'):
+            continue
+        gl = int(match['actual_goles_local'])
+        gv = int(match['actual_goles_visitante'])
+        home = table[match['local']]
+        away = table[match['visitante']]
+        home['gf'] += gl; home['ga'] += gv
+        away['gf'] += gv; away['ga'] += gl
+        hp, ap = result_points_for_match(match)
+        home['pts'] += hp; away['pts'] += ap
+    for row in table.values():
+        row['gd'] = row['gf'] - row['ga']
+    return sorted(table.values(), key=lambda r: (-r['pts'], -r['gd'], -r['gf'], r['team'].casefold()))
+
+
+def guaranteed_top2_by_points(matches):
+    """Return teams already guaranteed top-2 in a group.
+
+    Third-place qualification is intentionally NOT evaluated here, per Juan's
+    instruction, because best thirds cannot be known until enough groups finish.
+    For completed groups we use the actual ranked top 2. For incomplete groups
+    we only award teams that are top-2 in every W/D/L completion by points.
+    """
+    teams = sorted({m['local'] for m in matches} | {m['visitante'] for m in matches})
+    ranking = rank_group_played(matches)
+    remaining = [m for m in matches if not m.get('played')]
+    if not remaining:
+        return [r['team'] for r in ranking[:2]]
+
+    base = {r['team']: r['pts'] for r in ranking}
+    guaranteed = []
+    for team in teams:
+        ok = True
+        # Outcomes: 0 home win, 1 draw, 2 away win. We only need points; exact
+        # score/tiebreaks are not safe for future matches, so tied cutoffs are
+        # treated conservatively.
+        for outcomes in __import__('itertools').product((0, 1, 2), repeat=len(remaining)):
+            pts = dict(base)
+            for match, outcome in zip(remaining, outcomes):
+                if outcome == 0:
+                    pts[match['local']] += 3
+                elif outcome == 1:
+                    pts[match['local']] += 1
+                    pts[match['visitante']] += 1
+                else:
+                    pts[match['visitante']] += 3
+            better = sum(1 for other in teams if pts[other] > pts[team])
+            tied_or_better = sum(1 for other in teams if pts[other] >= pts[team])
+            if better > 1 or tied_or_better > 2:
+                ok = False
+                break
+        if ok:
+            guaranteed.append(team)
+    return guaranteed
+
+
+def current_r32_qualified_top2(group_matches):
+    by_group = {}
+    for match in group_matches:
+        by_group.setdefault(match['grupo'], []).append(match)
+    qualified = []
+    by_group_out = {}
+    for group, matches in sorted(by_group.items()):
+        teams = guaranteed_top2_by_points(matches)
+        by_group_out[group] = teams
+        qualified.extend(teams)
+    return sorted(set(qualified)), by_group_out
+
+
+def predicted_r32_teams_by_person(data):
+    out = {}
+    for prediction in data['predictions']:
+        if not prediction.get('is_knockout') or prediction.get('jornada') != 'Dieciseisavos':
+            continue
+        teams = out.setdefault(prediction['persona'], set())
+        if prediction.get('local'):
+            teams.add(prediction['local'])
+        if prediction.get('visitante'):
+            teams.add(prediction['visitante'])
+    return out
+
+
 def merge_results(data, actual_results):
-    # Only real group-stage fixtures should be scored right now. Knockout rows
-    # are participant-specific projected brackets, so they must remain visible
-    # but unscored until Juan defines knockout scoring rules.
+    # Only real group-stage fixtures should be scored for match result points.
+    # Knockout rows are participant-specific projected brackets; current scoring
+    # only adds known R32 qualification points for teams already guaranteed top 2.
     group_matches = [m for m in data['matches'] if not m.get('is_knockout')]
     known_partidos = {m['partido'] for m in group_matches}
     unknown = sorted(set(actual_results) - known_partidos)
@@ -222,6 +319,9 @@ def merge_results(data, actual_results):
             prediction['points_exact'] = 0
             prediction['points_total'] = 0
 
+    qualified_teams, qualified_by_group = current_r32_qualified_top2(group_matches)
+    predicted_qualified_by_person = predicted_r32_teams_by_person(data)
+
     standings = {}
     for prediction in data['predictions']:
         if prediction.get('is_knockout'):
@@ -235,6 +335,9 @@ def merge_results(data, actual_results):
             'hits_exact': 0,
             'points_1x2': 0,
             'points_exact': 0,
+            'points_qualified_r32': 0,
+            'hits_qualified_r32': 0,
+            'matched_qualified_r32': [],
         })
         if prediction.get('played'):
             row['played'] += 1
@@ -244,7 +347,26 @@ def merge_results(data, actual_results):
             row['points_exact'] += int(prediction.get('points_exact') or 0)
             row['points'] += int(prediction.get('points_total') or 0)
 
-    ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], r['persona'].casefold()))
+    for person, predicted_teams in predicted_qualified_by_person.items():
+        row = standings.setdefault(person, {
+            'persona': person,
+            'points': 0,
+            'played': 0,
+            'hits_1x2': 0,
+            'hits_exact': 0,
+            'points_1x2': 0,
+            'points_exact': 0,
+            'points_qualified_r32': 0,
+            'hits_qualified_r32': 0,
+            'matched_qualified_r32': [],
+        })
+        matched = sorted(set(qualified_teams) & set(predicted_teams))
+        row['hits_qualified_r32'] = len(matched)
+        row['points_qualified_r32'] = 4 * len(matched)
+        row['matched_qualified_r32'] = matched
+        row['points'] += row['points_qualified_r32']
+
+    ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], -r['hits_qualified_r32'], r['persona'].casefold()))
     for pos, row in enumerate(ranking, start=1):
         row['position'] = pos
     data['standings'] = ranking
@@ -253,6 +375,12 @@ def merge_results(data, actual_results):
             'sign_1x2': GROUP_POINTS_1X2,
             'exact_result': GROUP_POINTS_EXACT,
             'note': 'Fase de grupos: 4 puntos por acertar signo 1X2 y 2 puntos adicionales por resultado exacto.'
+        },
+        'round_of_32_qualification_current': {
+            'team_qualified': 4,
+            'qualified_teams': qualified_teams,
+            'qualified_by_group': qualified_by_group,
+            'note': 'Puntos actuales por equipos ya clasificados a dieciseisavos como top 2 de grupo. Los terceros no se evalúan todavía.'
         }
     }
 
@@ -264,7 +392,11 @@ def merge_results(data, actual_results):
 
 def main():
     data = json.loads(DATA_PATH.read_text(encoding='utf-8'))
-    actual_results = collect_finished_results()
+    # Preserve previously imported final results if the upstream feed temporarily
+    # omits older matches. Zafronix can roll historical items out of the current
+    # predictions payload; dropping them would incorrectly remove points.
+    previous_results = json.loads(RESULTS_PATH.read_text(encoding='utf-8')) if RESULTS_PATH.exists() else {}
+    actual_results = {**previous_results, **collect_finished_results()}
     count = merge_results(data, actual_results)
     DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
     RESULTS_PATH.write_text(json.dumps(actual_results, ensure_ascii=False, indent=2), encoding='utf-8')

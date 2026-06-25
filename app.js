@@ -183,7 +183,7 @@ function renderStandings() {
       <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
       <span class="standing-name">${escapeHtml(row.persona)}</span>
       <span class="standing-points">${row.points}<small>pts</small></span>
-      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span></span>
+      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}</span>
     </button>
   `).join('');
   document.querySelectorAll('.standing-row').forEach((button) => {
