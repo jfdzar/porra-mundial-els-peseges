@@ -29,7 +29,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 4,
     "zafronix_label": "WC2026-004",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Haití-Escocia": {
     "goles_local": 0,
@@ -37,7 +37,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 5,
     "zafronix_label": "WC2026-005",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Australia-Turquía": {
     "goles_local": 2,
@@ -45,7 +45,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 6,
     "zafronix_label": "WC2026-006",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Brasil-Marruecos": {
     "goles_local": 1,
@@ -53,7 +53,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 7,
     "zafronix_label": "WC2026-007",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Catar-Suiza": {
     "goles_local": 1,
@@ -61,7 +61,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 8,
     "zafronix_label": "WC2026-008",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Costa de Marfil-Ecuador": {
     "goles_local": 1,
@@ -69,7 +69,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 9,
     "zafronix_label": "WC2026-009",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Alemania-Curazao": {
     "goles_local": 7,
@@ -77,7 +77,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 10,
     "zafronix_label": "WC2026-010",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Países Bajos-Japón": {
     "goles_local": 2,
@@ -85,7 +85,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 11,
     "zafronix_label": "WC2026-011",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Suecia-Túnez": {
     "goles_local": 5,
@@ -93,7 +93,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 12,
     "zafronix_label": "WC2026-012",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Arabia Saudita-Uruguay": {
     "goles_local": 1,
@@ -101,7 +101,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 13,
     "zafronix_label": "WC2026-013",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "España-Cabo Verde": {
     "goles_local": 0,
@@ -109,7 +109,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 14,
     "zafronix_label": "WC2026-014",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Irán-Nueva Zelanda": {
     "goles_local": 2,
@@ -117,7 +117,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 15,
     "zafronix_label": "WC2026-015",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Bélgica-Egipto": {
     "goles_local": 1,
@@ -125,7 +125,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 16,
     "zafronix_label": "WC2026-016",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Francia-Senegal": {
     "goles_local": 3,
@@ -133,7 +133,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 17,
     "zafronix_label": "WC2026-017",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Irak-Noruega": {
     "goles_local": 1,
@@ -141,7 +141,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 18,
     "zafronix_label": "WC2026-018",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Argentina-Argelia": {
     "goles_local": 3,
@@ -149,7 +149,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 19,
     "zafronix_label": "WC2026-019",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Austria-Jordania": {
     "goles_local": 3,
@@ -157,7 +157,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 20,
     "zafronix_label": "WC2026-020",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Ghana-Panamá": {
     "goles_local": 1,
@@ -165,7 +165,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 21,
     "zafronix_label": "WC2026-021",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Inglaterra-Croacia": {
     "goles_local": 4,
@@ -173,7 +173,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 22,
     "zafronix_label": "WC2026-022",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Portugal-RD Congo": {
     "goles_local": 1,
@@ -181,7 +181,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 23,
     "zafronix_label": "WC2026-023",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Uzbekistán-Colombia": {
     "goles_local": 1,
@@ -189,7 +189,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 24,
     "zafronix_label": "WC2026-024",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "República Checa-Sudáfrica": {
     "goles_local": 1,
@@ -197,7 +197,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 25,
     "zafronix_label": "WC2026-025",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Suiza-Bosnia y Herzegovina": {
     "goles_local": 4,
@@ -205,7 +205,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 26,
     "zafronix_label": "WC2026-026",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Canadá-Catar": {
     "goles_local": 6,
@@ -213,7 +213,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 27,
     "zafronix_label": "WC2026-027",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "México-Corea del Sur": {
     "goles_local": 1,
@@ -221,7 +221,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 28,
     "zafronix_label": "WC2026-028",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Brasil-Haití": {
     "goles_local": 3,
@@ -229,7 +229,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 29,
     "zafronix_label": "WC2026-029",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Escocia-Marruecos": {
     "goles_local": 0,
@@ -237,7 +237,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 30,
     "zafronix_label": "WC2026-030",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Turquía-Paraguay": {
     "goles_local": 0,
@@ -245,7 +245,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 31,
     "zafronix_label": "WC2026-031",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Estados Unidos-Australia": {
     "goles_local": 2,
@@ -253,7 +253,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 32,
     "zafronix_label": "WC2026-032",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Alemania-Costa de Marfil": {
     "goles_local": 2,
@@ -261,7 +261,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 33,
     "zafronix_label": "WC2026-033",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Ecuador-Curazao": {
     "goles_local": 0,
@@ -269,7 +269,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 34,
     "zafronix_label": "WC2026-034",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Países Bajos-Suecia": {
     "goles_local": 5,
@@ -277,7 +277,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 35,
     "zafronix_label": "WC2026-035",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Túnez-Japón": {
     "goles_local": 0,
@@ -285,7 +285,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 36,
     "zafronix_label": "WC2026-036",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Uruguay-Cabo Verde": {
     "goles_local": 2,
@@ -293,7 +293,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 37,
     "zafronix_label": "WC2026-037",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "España-Arabia Saudita": {
     "goles_local": 4,
@@ -301,7 +301,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 38,
     "zafronix_label": "WC2026-038",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Bélgica-Irán": {
     "goles_local": 0,
@@ -309,7 +309,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 39,
     "zafronix_label": "WC2026-039",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Nueva Zelanda-Egipto": {
     "goles_local": 1,
@@ -317,7 +317,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 40,
     "zafronix_label": "WC2026-040",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Noruega-Senegal": {
     "goles_local": 3,
@@ -325,7 +325,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 41,
     "zafronix_label": "WC2026-041",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Francia-Irak": {
     "goles_local": 3,
@@ -333,7 +333,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 42,
     "zafronix_label": "WC2026-042",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Argentina-Austria": {
     "goles_local": 2,
@@ -341,7 +341,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 43,
     "zafronix_label": "WC2026-043",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Jordania-Argelia": {
     "goles_local": 1,
@@ -349,7 +349,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 44,
     "zafronix_label": "WC2026-044",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Inglaterra-Ghana": {
     "goles_local": 0,
@@ -357,7 +357,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 45,
     "zafronix_label": "WC2026-045",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Panamá-Croacia": {
     "goles_local": 0,
@@ -365,7 +365,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 46,
     "zafronix_label": "WC2026-046",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Portugal-Uzbekistán": {
     "goles_local": 5,
@@ -373,7 +373,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 47,
     "zafronix_label": "WC2026-047",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Colombia-RD Congo": {
     "goles_local": 1,
@@ -381,7 +381,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 48,
     "zafronix_label": "WC2026-048",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Escocia-Brasil": {
     "goles_local": 0,
@@ -389,7 +389,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 49,
     "zafronix_label": "WC2026-049",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Marruecos-Haití": {
     "goles_local": 4,
@@ -397,7 +397,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 50,
     "zafronix_label": "WC2026-050",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Suiza-Canadá": {
     "goles_local": 2,
@@ -405,7 +405,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 51,
     "zafronix_label": "WC2026-051",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Bosnia y Herzegovina-Catar": {
     "goles_local": 3,
@@ -413,7 +413,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 52,
     "zafronix_label": "WC2026-052",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "República Checa-México": {
     "goles_local": 0,
@@ -421,7 +421,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 53,
     "zafronix_label": "WC2026-053",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Sudáfrica-Corea del Sur": {
     "goles_local": 1,
@@ -429,7 +429,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 54,
     "zafronix_label": "WC2026-054",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Curazao-Costa de Marfil": {
     "goles_local": 0,
@@ -437,7 +437,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 55,
     "zafronix_label": "WC2026-055",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Ecuador-Alemania": {
     "goles_local": 2,
@@ -445,7 +445,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 56,
     "zafronix_label": "WC2026-056",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Japón-Suecia": {
     "goles_local": 1,
@@ -453,7 +453,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 57,
     "zafronix_label": "WC2026-057",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Túnez-Países Bajos": {
     "goles_local": 1,
@@ -461,7 +461,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 58,
     "zafronix_label": "WC2026-058",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Turquía-Estados Unidos": {
     "goles_local": 3,
@@ -469,7 +469,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 59,
     "zafronix_label": "WC2026-059",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   },
   "Paraguay-Australia": {
     "goles_local": 0,
@@ -477,6 +477,22 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 60,
     "zafronix_label": "WC2026-060",
-    "zafronix_as_of": "2026-06-26T06:30:17.285Z"
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+  },
+  "Noruega-Francia": {
+    "goles_local": 1,
+    "goles_visitante": 4,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 61,
+    "zafronix_label": "WC2026-061",
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+  },
+  "Senegal-Irak": {
+    "goles_local": 5,
+    "goles_visitante": 0,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 62,
+    "zafronix_label": "WC2026-062",
+    "zafronix_as_of": "2026-06-26T22:30:09.033Z"
   }
 }
