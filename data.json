@@ -1081,12 +1081,12 @@
       "partido": "Cabo Verde-Arabia Saudita",
       "local": "Cabo Verde",
       "visitante": "Arabia Saudita",
-      "played": false,
-      "actual_goles_local": null,
-      "actual_goles_visitante": null,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "actual_source": null
+      "played": true,
+      "actual_goles_local": 0,
+      "actual_goles_visitante": 0,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "actual_source": "https://api.zafronix.com/live-feed/predictions"
     },
     {
       "chronological_order": 64,
@@ -1098,12 +1098,12 @@
       "partido": "Uruguay-España",
       "local": "Uruguay",
       "visitante": "España",
-      "played": false,
-      "actual_goles_local": null,
-      "actual_goles_visitante": null,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "actual_source": null
+      "played": true,
+      "actual_goles_local": 0,
+      "actual_goles_visitante": 1,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "actual_source": "https://api.zafronix.com/live-feed/predictions"
     },
     {
       "chronological_order": 65,
@@ -1115,12 +1115,12 @@
       "partido": "Egipto-Irán",
       "local": "Egipto",
       "visitante": "Irán",
-      "played": false,
-      "actual_goles_local": null,
-      "actual_goles_visitante": null,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "actual_source": null
+      "played": true,
+      "actual_goles_local": 1,
+      "actual_goles_visitante": 1,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "actual_source": "https://api.zafronix.com/live-feed/predictions"
     },
     {
       "chronological_order": 66,
@@ -1132,12 +1132,12 @@
       "partido": "Nueva Zelanda-Bélgica",
       "local": "Nueva Zelanda",
       "visitante": "Bélgica",
-      "played": false,
-      "actual_goles_local": null,
-      "actual_goles_visitante": null,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "actual_source": null
+      "played": true,
+      "actual_goles_local": 1,
+      "actual_goles_visitante": 5,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "actual_source": "https://api.zafronix.com/live-feed/predictions"
     },
     {
       "chronological_order": 67,
@@ -3385,14 +3385,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Alex ml",
@@ -3410,14 +3410,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Alex ml",
@@ -3435,11 +3435,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -3460,14 +3460,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Alex ml",
@@ -5185,11 +5185,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -5210,14 +5210,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "David García Martín",
@@ -5235,11 +5235,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -5260,14 +5260,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "David García Martín",
@@ -6985,11 +6985,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -7010,11 +7010,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -7035,14 +7035,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Dj Pino",
@@ -7060,14 +7060,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Dj Pino",
@@ -8785,14 +8785,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Dry Mouth",
@@ -8810,14 +8810,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Dry Mouth",
@@ -8835,14 +8835,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Dry Mouth",
@@ -8860,14 +8860,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Dry Mouth",
@@ -10585,14 +10585,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Fiti",
@@ -10610,14 +10610,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Fiti",
@@ -10635,11 +10635,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -10660,14 +10660,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Fiti",
@@ -12385,11 +12385,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -12410,11 +12410,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -12435,11 +12435,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -12460,14 +12460,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Havier",
@@ -14185,11 +14185,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -14210,14 +14210,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Hector",
@@ -14235,11 +14235,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -14260,14 +14260,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Hector",
@@ -15985,11 +15985,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -16010,14 +16010,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Juan",
@@ -16035,14 +16035,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Juan",
@@ -16060,14 +16060,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Juan",
@@ -17785,14 +17785,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Manu",
@@ -17810,14 +17810,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Manu",
@@ -17835,11 +17835,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -17860,14 +17860,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Manu",
@@ -19585,14 +19585,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Marcos",
@@ -19610,14 +19610,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Marcos",
@@ -19635,11 +19635,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -19660,14 +19660,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Marcos",
@@ -21385,11 +21385,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -21410,14 +21410,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Narx",
@@ -21435,11 +21435,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -21460,14 +21460,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Narx",
@@ -23185,11 +23185,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -23210,14 +23210,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Pepunto",
@@ -23235,14 +23235,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Pepunto",
@@ -23260,14 +23260,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Pepunto",
@@ -24985,14 +24985,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Raúl",
@@ -25010,14 +25010,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Raúl",
@@ -25035,11 +25035,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -25060,14 +25060,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Raúl",
@@ -26785,14 +26785,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Vicente Hernández Ruiz",
@@ -26810,14 +26810,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Vicente Hernández Ruiz",
@@ -26835,14 +26835,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
-      "points_exact": 0,
-      "points_total": 0
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": true,
+      "hit_exact": true,
+      "points_1x2": 4,
+      "points_exact": 2,
+      "points_total": 6
     },
     {
       "persona": "Vicente Hernández Ruiz",
@@ -26860,14 +26860,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Vicente Hernández Ruiz",
@@ -28585,11 +28585,11 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 63,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "0-0",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -28610,14 +28610,14 @@
       "datetime_iso": "2026-06-27T02:00",
       "datetime_label": "27/06/2026 02:00",
       "chronological_order": 64,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "0-1",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Victor",
@@ -28635,11 +28635,11 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 65,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "1-1",
+      "actual_signo": "X",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0
@@ -28660,14 +28660,14 @@
       "datetime_iso": "2026-06-27T05:00",
       "datetime_label": "27/06/2026 05:00",
       "chronological_order": 66,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "1-5",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0
+      "points_total": 4
     },
     {
       "persona": "Victor",
@@ -42299,7 +42299,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 5,
       "zafronix_label": "WC2026-005",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Australia-Turquía": {
       "goles_local": 2,
@@ -42307,7 +42307,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 6,
       "zafronix_label": "WC2026-006",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Brasil-Marruecos": {
       "goles_local": 1,
@@ -42315,7 +42315,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 7,
       "zafronix_label": "WC2026-007",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Catar-Suiza": {
       "goles_local": 1,
@@ -42323,7 +42323,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 8,
       "zafronix_label": "WC2026-008",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Costa de Marfil-Ecuador": {
       "goles_local": 1,
@@ -42331,7 +42331,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 9,
       "zafronix_label": "WC2026-009",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Alemania-Curazao": {
       "goles_local": 7,
@@ -42339,7 +42339,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 10,
       "zafronix_label": "WC2026-010",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Países Bajos-Japón": {
       "goles_local": 2,
@@ -42347,7 +42347,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 11,
       "zafronix_label": "WC2026-011",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Suecia-Túnez": {
       "goles_local": 5,
@@ -42355,7 +42355,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 12,
       "zafronix_label": "WC2026-012",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Arabia Saudita-Uruguay": {
       "goles_local": 1,
@@ -42363,7 +42363,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 13,
       "zafronix_label": "WC2026-013",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "España-Cabo Verde": {
       "goles_local": 0,
@@ -42371,7 +42371,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 14,
       "zafronix_label": "WC2026-014",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Irán-Nueva Zelanda": {
       "goles_local": 2,
@@ -42379,7 +42379,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 15,
       "zafronix_label": "WC2026-015",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Bélgica-Egipto": {
       "goles_local": 1,
@@ -42387,7 +42387,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 16,
       "zafronix_label": "WC2026-016",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Francia-Senegal": {
       "goles_local": 3,
@@ -42395,7 +42395,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 17,
       "zafronix_label": "WC2026-017",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Irak-Noruega": {
       "goles_local": 1,
@@ -42403,7 +42403,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 18,
       "zafronix_label": "WC2026-018",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Argentina-Argelia": {
       "goles_local": 3,
@@ -42411,7 +42411,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 19,
       "zafronix_label": "WC2026-019",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Austria-Jordania": {
       "goles_local": 3,
@@ -42419,7 +42419,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 20,
       "zafronix_label": "WC2026-020",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Ghana-Panamá": {
       "goles_local": 1,
@@ -42427,7 +42427,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 21,
       "zafronix_label": "WC2026-021",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Inglaterra-Croacia": {
       "goles_local": 4,
@@ -42435,7 +42435,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 22,
       "zafronix_label": "WC2026-022",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Portugal-RD Congo": {
       "goles_local": 1,
@@ -42443,7 +42443,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 23,
       "zafronix_label": "WC2026-023",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Uzbekistán-Colombia": {
       "goles_local": 1,
@@ -42451,7 +42451,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 24,
       "zafronix_label": "WC2026-024",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "República Checa-Sudáfrica": {
       "goles_local": 1,
@@ -42459,7 +42459,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 25,
       "zafronix_label": "WC2026-025",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Suiza-Bosnia y Herzegovina": {
       "goles_local": 4,
@@ -42467,7 +42467,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 26,
       "zafronix_label": "WC2026-026",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Canadá-Catar": {
       "goles_local": 6,
@@ -42475,7 +42475,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 27,
       "zafronix_label": "WC2026-027",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "México-Corea del Sur": {
       "goles_local": 1,
@@ -42483,7 +42483,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 28,
       "zafronix_label": "WC2026-028",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Brasil-Haití": {
       "goles_local": 3,
@@ -42491,7 +42491,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 29,
       "zafronix_label": "WC2026-029",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Escocia-Marruecos": {
       "goles_local": 0,
@@ -42499,7 +42499,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 30,
       "zafronix_label": "WC2026-030",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Turquía-Paraguay": {
       "goles_local": 0,
@@ -42507,7 +42507,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 31,
       "zafronix_label": "WC2026-031",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Estados Unidos-Australia": {
       "goles_local": 2,
@@ -42515,7 +42515,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 32,
       "zafronix_label": "WC2026-032",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Alemania-Costa de Marfil": {
       "goles_local": 2,
@@ -42523,7 +42523,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 33,
       "zafronix_label": "WC2026-033",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Ecuador-Curazao": {
       "goles_local": 0,
@@ -42531,7 +42531,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 34,
       "zafronix_label": "WC2026-034",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Países Bajos-Suecia": {
       "goles_local": 5,
@@ -42539,7 +42539,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 35,
       "zafronix_label": "WC2026-035",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Túnez-Japón": {
       "goles_local": 0,
@@ -42547,7 +42547,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 36,
       "zafronix_label": "WC2026-036",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Uruguay-Cabo Verde": {
       "goles_local": 2,
@@ -42555,7 +42555,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 37,
       "zafronix_label": "WC2026-037",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "España-Arabia Saudita": {
       "goles_local": 4,
@@ -42563,7 +42563,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 38,
       "zafronix_label": "WC2026-038",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Bélgica-Irán": {
       "goles_local": 0,
@@ -42571,7 +42571,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 39,
       "zafronix_label": "WC2026-039",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Nueva Zelanda-Egipto": {
       "goles_local": 1,
@@ -42579,7 +42579,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 40,
       "zafronix_label": "WC2026-040",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Noruega-Senegal": {
       "goles_local": 3,
@@ -42587,7 +42587,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 41,
       "zafronix_label": "WC2026-041",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Francia-Irak": {
       "goles_local": 3,
@@ -42595,7 +42595,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 42,
       "zafronix_label": "WC2026-042",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Argentina-Austria": {
       "goles_local": 2,
@@ -42603,7 +42603,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 43,
       "zafronix_label": "WC2026-043",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Jordania-Argelia": {
       "goles_local": 1,
@@ -42611,7 +42611,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 44,
       "zafronix_label": "WC2026-044",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Inglaterra-Ghana": {
       "goles_local": 0,
@@ -42619,7 +42619,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 45,
       "zafronix_label": "WC2026-045",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Panamá-Croacia": {
       "goles_local": 0,
@@ -42627,7 +42627,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 46,
       "zafronix_label": "WC2026-046",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Portugal-Uzbekistán": {
       "goles_local": 5,
@@ -42635,7 +42635,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 47,
       "zafronix_label": "WC2026-047",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Colombia-RD Congo": {
       "goles_local": 1,
@@ -42643,7 +42643,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 48,
       "zafronix_label": "WC2026-048",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Escocia-Brasil": {
       "goles_local": 0,
@@ -42651,7 +42651,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 49,
       "zafronix_label": "WC2026-049",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Marruecos-Haití": {
       "goles_local": 4,
@@ -42659,7 +42659,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 50,
       "zafronix_label": "WC2026-050",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Suiza-Canadá": {
       "goles_local": 2,
@@ -42667,7 +42667,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 51,
       "zafronix_label": "WC2026-051",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Bosnia y Herzegovina-Catar": {
       "goles_local": 3,
@@ -42675,7 +42675,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 52,
       "zafronix_label": "WC2026-052",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "República Checa-México": {
       "goles_local": 0,
@@ -42683,7 +42683,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 53,
       "zafronix_label": "WC2026-053",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Sudáfrica-Corea del Sur": {
       "goles_local": 1,
@@ -42691,7 +42691,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 54,
       "zafronix_label": "WC2026-054",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Curazao-Costa de Marfil": {
       "goles_local": 0,
@@ -42699,7 +42699,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 55,
       "zafronix_label": "WC2026-055",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Ecuador-Alemania": {
       "goles_local": 2,
@@ -42707,7 +42707,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 56,
       "zafronix_label": "WC2026-056",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Japón-Suecia": {
       "goles_local": 1,
@@ -42715,7 +42715,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 57,
       "zafronix_label": "WC2026-057",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Túnez-Países Bajos": {
       "goles_local": 1,
@@ -42723,7 +42723,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 58,
       "zafronix_label": "WC2026-058",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Turquía-Estados Unidos": {
       "goles_local": 3,
@@ -42731,7 +42731,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 59,
       "zafronix_label": "WC2026-059",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Paraguay-Australia": {
       "goles_local": 0,
@@ -42739,7 +42739,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 60,
       "zafronix_label": "WC2026-060",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Noruega-Francia": {
       "goles_local": 1,
@@ -42747,7 +42747,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 61,
       "zafronix_label": "WC2026-061",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     },
     "Senegal-Irak": {
       "goles_local": 5,
@@ -42755,29 +42755,64 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 62,
       "zafronix_label": "WC2026-062",
-      "zafronix_as_of": "2026-06-26T22:30:09.033Z"
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
+    },
+    "Egipto-Irán": {
+      "goles_local": 1,
+      "goles_visitante": 1,
+      "source": "https://api.zafronix.com/live-feed/predictions",
+      "zafronix_match_no": 63,
+      "zafronix_label": "WC2026-063",
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
+    },
+    "Nueva Zelanda-Bélgica": {
+      "goles_local": 1,
+      "goles_visitante": 5,
+      "source": "https://api.zafronix.com/live-feed/predictions",
+      "zafronix_match_no": 64,
+      "zafronix_label": "WC2026-064",
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
+    },
+    "Cabo Verde-Arabia Saudita": {
+      "goles_local": 0,
+      "goles_visitante": 0,
+      "source": "https://api.zafronix.com/live-feed/predictions",
+      "zafronix_match_no": 65,
+      "zafronix_label": "WC2026-065",
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
+    },
+    "Uruguay-España": {
+      "goles_local": 0,
+      "goles_visitante": 1,
+      "source": "https://api.zafronix.com/live-feed/predictions",
+      "zafronix_match_no": 66,
+      "zafronix_label": "WC2026-066",
+      "zafronix_as_of": "2026-06-27T06:30:09.368Z"
     }
   },
-  "updated_at": "2026-06-26T22:30:21+00:00",
+  "updated_at": "2026-06-27T06:30:22+00:00",
   "actual_results_source": "zafronix",
   "standings": [
     {
       "persona": "Juan",
-      "points": 234,
-      "played": 62,
-      "hits_1x2": 40,
-      "hits_exact": 9,
-      "points_1x2": 160,
-      "points_exact": 18,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "points": 260,
+      "played": 66,
+      "hits_1x2": 43,
+      "hits_exact": 10,
+      "points_1x2": 172,
+      "points_exact": 20,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42790,23 +42825,25 @@
       "position": 1
     },
     {
-      "persona": "Narx",
-      "points": 230,
-      "played": 62,
-      "hits_1x2": 39,
-      "hits_exact": 7,
-      "points_1x2": 156,
-      "points_exact": 14,
-      "points_qualified_r32": 60,
-      "hits_qualified_r32": 15,
+      "persona": "Raúl",
+      "points": 254,
+      "played": 66,
+      "hits_1x2": 41,
+      "hits_exact": 11,
+      "points_1x2": 164,
+      "points_exact": 22,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
-        "Australia",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42819,22 +42856,25 @@
       "position": 2
     },
     {
-      "persona": "Raúl",
-      "points": 228,
-      "played": 62,
-      "hits_1x2": 38,
-      "hits_exact": 10,
-      "points_1x2": 152,
-      "points_exact": 20,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Dry Mouth",
+      "points": 250,
+      "played": 66,
+      "hits_1x2": 42,
+      "hits_exact": 7,
+      "points_1x2": 168,
+      "points_exact": 14,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42847,22 +42887,27 @@
       "position": 3
     },
     {
-      "persona": "Victor",
-      "points": 228,
-      "played": 62,
-      "hits_1x2": 40,
-      "hits_exact": 8,
-      "points_1x2": 160,
-      "points_exact": 16,
-      "points_qualified_r32": 52,
-      "hits_qualified_r32": 13,
+      "persona": "Narx",
+      "points": 250,
+      "played": 66,
+      "hits_1x2": 41,
+      "hits_exact": 7,
+      "points_1x2": 164,
+      "points_exact": 14,
+      "points_qualified_r32": 72,
+      "hits_qualified_r32": 18,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
+        "Australia",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
+        "Estados Unidos",
         "Francia",
         "Japón",
         "Marruecos",
@@ -42874,22 +42919,25 @@
       "position": 4
     },
     {
-      "persona": "Fiti",
-      "points": 222,
-      "played": 62,
-      "hits_1x2": 39,
-      "hits_exact": 7,
-      "points_1x2": 156,
-      "points_exact": 14,
-      "points_qualified_r32": 52,
-      "hits_qualified_r32": 13,
+      "persona": "Victor",
+      "points": 248,
+      "played": 66,
+      "hits_1x2": 42,
+      "hits_exact": 8,
+      "points_1x2": 168,
+      "points_exact": 16,
+      "points_qualified_r32": 64,
+      "hits_qualified_r32": 16,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
+        "Canadá",
         "Colombia",
         "Costa de Marfil",
-        "Estados Unidos",
+        "Egipto",
+        "España",
         "Francia",
         "Japón",
         "Marruecos",
@@ -42901,22 +42949,25 @@
       "position": 5
     },
     {
-      "persona": "Dry Mouth",
-      "points": 220,
-      "played": 62,
-      "hits_1x2": 38,
-      "hits_exact": 6,
-      "points_1x2": 152,
-      "points_exact": 12,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Vicente Hernández Ruiz",
+      "points": 246,
+      "played": 66,
+      "hits_1x2": 40,
+      "hits_exact": 9,
+      "points_1x2": 160,
+      "points_exact": 18,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42929,22 +42980,24 @@
       "position": 6
     },
     {
-      "persona": "Manu",
-      "points": 216,
-      "played": 62,
-      "hits_1x2": 35,
-      "hits_exact": 10,
-      "points_1x2": 140,
-      "points_exact": 20,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Fiti",
+      "points": 246,
+      "played": 66,
+      "hits_1x2": 42,
+      "hits_exact": 7,
+      "points_1x2": 168,
+      "points_exact": 14,
+      "points_qualified_r32": 64,
+      "hits_qualified_r32": 16,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
-        "Canadá",
+        "Bélgica",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42957,22 +43010,25 @@
       "position": 7
     },
     {
-      "persona": "Vicente Hernández Ruiz",
-      "points": 216,
-      "played": 62,
-      "hits_1x2": 36,
-      "hits_exact": 8,
-      "points_1x2": 144,
-      "points_exact": 16,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Manu",
+      "points": 242,
+      "played": 66,
+      "hits_1x2": 38,
+      "hits_exact": 11,
+      "points_1x2": 152,
+      "points_exact": 22,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -42986,21 +43042,23 @@
     },
     {
       "persona": "Marcos",
-      "points": 210,
-      "played": 62,
-      "hits_1x2": 35,
+      "points": 230,
+      "played": 66,
+      "hits_1x2": 38,
       "hits_exact": 7,
-      "points_1x2": 140,
+      "points_1x2": 152,
       "points_exact": 14,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "points_qualified_r32": 64,
+      "hits_qualified_r32": 16,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -43013,22 +43071,26 @@
       "position": 9
     },
     {
-      "persona": "David García Martín",
-      "points": 208,
-      "played": 62,
-      "hits_1x2": 36,
-      "hits_exact": 4,
-      "points_1x2": 144,
-      "points_exact": 8,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Pepunto",
+      "points": 230,
+      "played": 66,
+      "hits_1x2": 37,
+      "hits_exact": 5,
+      "points_1x2": 148,
+      "points_exact": 10,
+      "points_qualified_r32": 72,
+      "hits_qualified_r32": 18,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
+        "Australia",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -43041,23 +43103,25 @@
       "position": 10
     },
     {
-      "persona": "Pepunto",
-      "points": 204,
-      "played": 62,
-      "hits_1x2": 34,
+      "persona": "David García Martín",
+      "points": 228,
+      "played": 66,
+      "hits_1x2": 38,
       "hits_exact": 4,
-      "points_1x2": 136,
+      "points_1x2": 152,
       "points_exact": 8,
-      "points_qualified_r32": 60,
-      "hits_qualified_r32": 15,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
-        "Australia",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -43070,27 +43134,31 @@
       "position": 11
     },
     {
-      "persona": "Havier",
-      "points": 200,
-      "played": 62,
-      "hits_1x2": 33,
-      "hits_exact": 8,
-      "points_1x2": 132,
-      "points_exact": 16,
-      "points_qualified_r32": 52,
-      "hits_qualified_r32": 13,
+      "persona": "Dj Pino",
+      "points": 218,
+      "played": 66,
+      "hits_1x2": 35,
+      "hits_exact": 5,
+      "points_1x2": 140,
+      "points_exact": 10,
+      "points_qualified_r32": 68,
+      "hits_qualified_r32": 17,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
         "Marruecos",
         "México",
+        "Noruega",
         "Países Bajos",
         "Suiza"
       ],
@@ -43098,20 +43166,22 @@
     },
     {
       "persona": "Hector",
-      "points": 198,
-      "played": 62,
-      "hits_1x2": 32,
+      "points": 214,
+      "played": 66,
+      "hits_1x2": 34,
       "hits_exact": 9,
-      "points_1x2": 128,
+      "points_1x2": 136,
       "points_exact": 18,
-      "points_qualified_r32": 52,
-      "hits_qualified_r32": 13,
+      "points_qualified_r32": 60,
+      "hits_qualified_r32": 15,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -43124,28 +43194,29 @@
       "position": 13
     },
     {
-      "persona": "Dj Pino",
-      "points": 196,
-      "played": 62,
-      "hits_1x2": 33,
-      "hits_exact": 4,
-      "points_1x2": 132,
-      "points_exact": 8,
-      "points_qualified_r32": 56,
-      "hits_qualified_r32": 14,
+      "persona": "Havier",
+      "points": 212,
+      "played": 66,
+      "hits_1x2": 34,
+      "hits_exact": 8,
+      "points_1x2": 136,
+      "points_exact": 16,
+      "points_qualified_r32": 60,
+      "hits_qualified_r32": 15,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
         "Marruecos",
         "México",
-        "Noruega",
         "Países Bajos",
         "Suiza"
       ],
@@ -43153,21 +43224,24 @@
     },
     {
       "persona": "Alex ml",
-      "points": 180,
-      "played": 62,
-      "hits_1x2": 30,
+      "points": 204,
+      "played": 66,
+      "hits_1x2": 33,
       "hits_exact": 4,
-      "points_1x2": 120,
+      "points_1x2": 132,
       "points_exact": 8,
-      "points_qualified_r32": 52,
-      "hits_qualified_r32": 13,
+      "points_qualified_r32": 64,
+      "hits_qualified_r32": 16,
       "matched_qualified_r32": [
         "Alemania",
         "Argentina",
         "Australia",
         "Brasil",
+        "Bélgica",
         "Canadá",
         "Colombia",
+        "Egipto",
+        "España",
         "Francia",
         "Marruecos",
         "México",
@@ -43192,9 +43266,13 @@
         "Argentina",
         "Australia",
         "Brasil",
+        "Bélgica",
+        "Cabo Verde",
         "Canadá",
         "Colombia",
         "Costa de Marfil",
+        "Egipto",
+        "España",
         "Estados Unidos",
         "Francia",
         "Japón",
@@ -43230,8 +43308,14 @@
           "Países Bajos",
           "Japón"
         ],
-        "G": [],
-        "H": [],
+        "G": [
+          "Bélgica",
+          "Egipto"
+        ],
+        "H": [
+          "España",
+          "Cabo Verde"
+        ],
         "I": [
           "Francia",
           "Noruega"
