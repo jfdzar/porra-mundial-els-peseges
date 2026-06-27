@@ -174,6 +174,86 @@ function renderComparisonHtml(matchPrediction) {
   `;
 }
 
+function pct(value, total) {
+  if (!total) return '0%';
+  return `${Math.round((Number(value || 0) * 100) / total)}%`;
+}
+
+function currentDisputedInfo() {
+  const playedGroupMatches = (state.data.matches || []).filter((m) => m.played && !m.is_knockout).length;
+  const completedGroups = Object.keys(state.data.scoring?.group_positions_current?.completed_group_positions || {}).length;
+  const qualifiedTeams = (state.data.scoring?.round_of_32_qualification_current?.qualified_teams || []).length;
+  const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4;
+  const totalTournament = 1323;
+  return {
+    playedGroupMatches,
+    completedGroups,
+    completedPositions: completedGroups * 4,
+    qualifiedTeams,
+    disputed,
+    percent: totalTournament ? `${((disputed * 100) / totalTournament).toFixed(2).replace('.', ',')}%` : '',
+  };
+}
+
+function renderScoreAuditTable() {
+  const mount = $('scoreAuditTable');
+  if (!mount) return;
+  const standings = state.data.standings || [];
+  const info = currentDisputedInfo();
+  const rows = standings.map((row) => {
+    const posClass = row.position <= 3 ? `podium podium-${row.position}` : '';
+    const selectedClass = row.persona === state.person ? 'selected-audit' : '';
+    return `
+      <tr class="${posClass} ${selectedClass}" data-person="${escapeHtml(row.persona)}">
+        <td class="audit-pos">${row.position}</td>
+        <td class="audit-name">${escapeHtml(row.persona)}</td>
+        <td class="audit-points">${Number(row.points || 0)}</td>
+        <td>${Number(row.hits_1x2 || 0)}</td>
+        <td>${pct(row.hits_1x2, info.playedGroupMatches)}</td>
+        <td>${Number(row.hits_exact || 0)}</td>
+        <td>${pct(row.hits_exact, info.playedGroupMatches)}</td>
+        <td>${Number(row.hits_group_positions || 0)}</td>
+        <td>${pct(row.hits_group_positions, info.completedPositions)}</td>
+        <td>${Number(row.hits_qualified_r32 || 0)}</td>
+      </tr>
+    `;
+  }).join('');
+  mount.innerHTML = `
+    <table class="score-audit-table">
+      <thead>
+        <tr class="audit-superhead">
+          <th colspan="2">Puntos<br>disputados</th>
+          <th>${info.percent}</th>
+          <th colspan="6">Fase de Grupos</th>
+          <th>1/16</th>
+        </tr>
+        <tr>
+          <th>POS</th>
+          <th>NOMBRE</th>
+          <th>PUNTOS</th>
+          <th>1X2</th>
+          <th>%</th>
+          <th>Res.<br>Exact</th>
+          <th>%</th>
+          <th>Pos.<br>Exacta</th>
+          <th>%</th>
+          <th>Eq.<br>Clasif</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta y ${info.qualifiedTeams} equipos clasificados a 1/16. Los terceros de grupo todavía no se evalúan como clasificados.</p>
+  `;
+  mount.querySelectorAll('tbody tr').forEach((row) => {
+    row.addEventListener('click', () => {
+      state.person = row.dataset.person;
+      state.expandedMatchKey = null;
+      $('personSelect').value = state.person;
+      renderTimeline();
+    });
+  });
+}
+
 function renderStandings() {
   const standings = state.data.standings || [];
   const selected = state.person;
@@ -183,7 +263,7 @@ function renderStandings() {
       <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
       <span class="standing-name">${escapeHtml(row.persona)}</span>
       <span class="standing-points">${row.points}<small>pts</small></span>
-      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}</span>
+      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_group_positions || 0) ? `<span class="standing-stat"><b>${row.points_group_positions}</b> pos.</span>` : ''}${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}</span>
     </button>
   `).join('');
   document.querySelectorAll('.standing-row').forEach((button) => {
@@ -199,6 +279,7 @@ function renderStandings() {
 function renderTimeline() {
   const rows = filteredPredictions();
   renderStandings();
+  renderScoreAuditTable();
   renderSummary(rows);
   const timeline = $('timeline');
   timeline.innerHTML = '';

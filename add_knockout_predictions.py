@@ -16,7 +16,7 @@ import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-ROOT = Path('/opt/data/PorraMundial/web')
+ROOT = Path(__file__).resolve().parent
 DATA_JSON = ROOT / 'data.json'
 PORRAS = Path('/hermes-workspace/PorraMundial/porras')
 OUT_CSV = ROOT / 'predicciones_eliminatorias_consolidado.csv'
@@ -46,6 +46,10 @@ AWARDS_POOL = {'campeon': 'C250', 'subcampeon': 'C251', 'tercero': 'C252', 'bota
 AWARDS_HECTOR = {'campeon': 'A246', 'subcampeon': 'A247', 'tercero': 'A248', 'bota_oro': 'A249', 'balon_oro': 'A252'}
 QUALS_POOL = {'Finalistas': range(240, 242), 'Semifinalistas': range(226, 230)}
 QUALS_HECTOR = {'Finalistas': range(236, 238), 'Semifinalistas': range(222, 226)}
+GROUP_POSITION_ROWS_POOL = range(80, 128)
+GROUP_POSITION_ROWS_HECTOR = range(76, 124)
+R32_QUALIFIER_ROWS_POOL = range(130, 162)
+R32_QUALIFIER_ROWS_HECTOR = range(126, 158)
 
 
 def load_sheets(path: Path) -> dict[str, dict[str, str]]:
@@ -124,6 +128,20 @@ def parse_prediction(raw: str, fallback_match: str = '') -> dict[str, str | int 
     return result
 
 
+def extract_group_positions(cells: dict[str, str], column: str, rows) -> dict[str, list[str]]:
+    positions: dict[str, list[str]] = {}
+    for idx, row_num in enumerate(rows):
+        group = chr(ord('A') + idx // 4)
+        team = cells.get(f'{column}{row_num}', '').strip()
+        if team:
+            positions.setdefault(group, []).append(team)
+    return positions
+
+
+def extract_team_list(cells: dict[str, str], column: str, rows) -> list[str]:
+    return [cells.get(f'{column}{row_num}', '').strip() for row_num in rows if cells.get(f'{column}{row_num}', '').strip()]
+
+
 def extract_one(path: Path) -> tuple[str, list[dict], dict]:
     sheets = load_sheets(path)
     if 'Pool' in sheets:
@@ -133,6 +151,8 @@ def extract_one(path: Path) -> tuple[str, list[dict], dict]:
         awards = {key: cells.get(ref, '') for key, ref in AWARDS_POOL.items()}
         finalistas = [cells.get(f'C{r}', '') for r in QUALS_POOL['Finalistas'] if cells.get(f'C{r}', '')]
         semifinalistas = [cells.get(f'C{r}', '') for r in QUALS_POOL['Semifinalistas'] if cells.get(f'C{r}', '')]
+        group_positions = extract_group_positions(cells, 'C', GROUP_POSITION_ROWS_POOL)
+        r32_qualified_teams = extract_team_list(cells, 'C', R32_QUALIFIER_ROWS_POOL)
         raw_for_row = lambda r: cells.get(f'C{r}', '')
         fallback_match = lambda r: cells.get(f'B{r}', '')
     else:
@@ -142,6 +162,8 @@ def extract_one(path: Path) -> tuple[str, list[dict], dict]:
         awards = {key: cells.get(ref, '') for key, ref in AWARDS_HECTOR.items()}
         finalistas = [cells.get(f'A{r}', '') for r in QUALS_HECTOR['Finalistas'] if cells.get(f'A{r}', '')]
         semifinalistas = [cells.get(f'A{r}', '') for r in QUALS_HECTOR['Semifinalistas'] if cells.get(f'A{r}', '')]
+        group_positions = extract_group_positions(cells, 'A', GROUP_POSITION_ROWS_HECTOR)
+        r32_qualified_teams = extract_team_list(cells, 'A', R32_QUALIFIER_ROWS_HECTOR)
         raw_for_row = lambda r: cells.get(f'A{r}', '')
         fallback_match = lambda r: cells.get(f'A{r}', '').split('·', 1)[0] if '·' in cells.get(f'A{r}', '') else ''
 
@@ -172,7 +194,14 @@ def extract_one(path: Path) -> tuple[str, list[dict], dict]:
                 'points_total': 0,
                 'is_knockout': True,
             })
-    summary = {'persona': persona, **awards, 'finalistas': finalistas, 'semifinalistas': semifinalistas}
+    summary = {
+        'persona': persona,
+        **awards,
+        'group_positions': group_positions,
+        'r32_qualified_teams': r32_qualified_teams,
+        'finalistas': finalistas,
+        'semifinalistas': semifinalistas,
+    }
     return persona, rows, summary
 
 
