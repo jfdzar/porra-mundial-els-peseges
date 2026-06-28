@@ -402,7 +402,7 @@ h2 { margin: 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.05em; }
 .score-audit-scroll { overflow-x: auto; }
 .score-audit-table {
   width: 100%;
-  min-width: 760px;
+  min-width: 860px;
   border-collapse: collapse;
   font-size: 14px;
   text-align: center;

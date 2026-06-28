@@ -236,6 +236,82 @@ def current_r32_qualified_top2(group_matches):
     return sorted(set(qualified)), by_group_out
 
 
+def current_r32_qualified_teams(group_matches):
+    """Return currently scorable R32 qualified teams.
+
+    Before all groups finish, only guaranteed top-2 teams are safe. Once every
+    group is complete, add the eight best third-place teams.
+    """
+    by_group = {}
+    for match in group_matches:
+        by_group.setdefault(match['grupo'], []).append(match)
+    if not by_group or not all(all(match.get('played') for match in matches) for matches in by_group.values()):
+        return current_r32_qualified_top2(group_matches)
+
+    qualified = []
+    by_group_out = {}
+    thirds = []
+    for group, matches in sorted(by_group.items()):
+        ranking = rank_group_played(matches)
+        teams = [ranking[0]['team'], ranking[1]['team']]
+        by_group_out[group] = teams
+        qualified.extend(teams)
+        third = dict(ranking[2])
+        third['group'] = group
+        thirds.append(third)
+    best_thirds = sorted(thirds, key=lambda r: (-r['pts'], -r['gd'], -r['gf'], r['team'].casefold()))[:8]
+    for row in best_thirds:
+        by_group_out[row['group']].append(row['team'])
+        qualified.append(row['team'])
+    return sorted(set(qualified)), by_group_out
+
+
+R32_MATCHNO_BY_PREDICTION_ORDER = {
+    73: 73, 74: 76, 75: 74, 76: 75,
+    77: 78, 78: 77, 79: 79, 80: 80,
+    81: 82, 82: 81, 83: 84, 84: 83,
+    85: 85, 86: 88, 87: 86, 88: 87,
+}
+
+R32_BRACKET_DEFS = [
+    (73, '2A', '2B'),
+    (74, '1E', '3D'),
+    (75, '1F', '2C'),
+    (76, '1C', '2F'),
+    (77, '1I', '3F'),
+    (78, '2E', '2I'),
+    (79, '1A', '3E'),
+    (80, '1L', '3K'),
+    (81, '1D', '3B'),
+    (82, '1G', '3I'),
+    (83, '2K', '2L'),
+    (84, '1H', '2J'),
+    (85, '1B', '3J'),
+    (86, '1J', '2H'),
+    (87, '1K', '3L'),
+    (88, '2D', '2G'),
+]
+
+
+def current_r32_matchups(group_matches):
+    by_group = {}
+    for match in group_matches:
+        by_group.setdefault(match['grupo'], []).append(match)
+    if not by_group or not all(all(match.get('played') for match in matches) for matches in by_group.values()):
+        return {}
+    positions = {group: [row['team'] for row in rank_group_played(matches)] for group, matches in by_group.items()}
+    matchups = {}
+    def team_for(code):
+        pos = int(code[0]) - 1
+        group = code[1]
+        return positions[group][pos]
+    for match_no, left, right in R32_BRACKET_DEFS:
+        home = team_for(left)
+        away = team_for(right)
+        matchups[match_no] = {'home': home, 'away': away, 'teams': sorted([home, away])}
+    return matchups
+
+
 def completed_group_positions(group_matches):
     by_group = {}
     for match in group_matches:
@@ -343,7 +419,8 @@ def merge_results(data, actual_results):
             prediction['points_exact'] = 0
             prediction['points_total'] = 0
 
-    qualified_teams, qualified_by_group = current_r32_qualified_top2(group_matches)
+    qualified_teams, qualified_by_group = current_r32_qualified_teams(group_matches)
+    r32_matchups = current_r32_matchups(group_matches)
     completed_positions_by_group = completed_group_positions(group_matches)
     predicted_positions_by_person = predicted_group_positions_by_person(data)
     predicted_qualified_by_person = predicted_r32_teams_by_person(data)
@@ -367,6 +444,9 @@ def merge_results(data, actual_results):
             'points_qualified_r32': 0,
             'hits_qualified_r32': 0,
             'matched_qualified_r32': [],
+            'points_r32_matchups': 0,
+            'hits_r32_matchups': 0,
+            'matched_r32_matchups': [],
         })
         if prediction.get('played'):
             row['played'] += 1
@@ -391,6 +471,9 @@ def merge_results(data, actual_results):
             'points_qualified_r32': 0,
             'hits_qualified_r32': 0,
             'matched_qualified_r32': [],
+            'points_r32_matchups': 0,
+            'hits_r32_matchups': 0,
+            'matched_r32_matchups': [],
         })
         matched_positions = []
         for group, actual_positions in completed_positions_by_group.items():
@@ -418,6 +501,9 @@ def merge_results(data, actual_results):
             'points_qualified_r32': 0,
             'hits_qualified_r32': 0,
             'matched_qualified_r32': [],
+            'points_r32_matchups': 0,
+            'hits_r32_matchups': 0,
+            'matched_r32_matchups': [],
         })
         matched = sorted(set(qualified_teams) & set(predicted_teams))
         row['hits_qualified_r32'] = len(matched)
@@ -425,7 +511,27 @@ def merge_results(data, actual_results):
         row['matched_qualified_r32'] = matched
         row['points'] += row['points_qualified_r32']
 
-    ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], -r['hits_group_positions'], -r['hits_qualified_r32'], r['persona'].casefold()))
+    if r32_matchups:
+        for prediction in data['predictions']:
+            if not prediction.get('is_knockout') or prediction.get('jornada') != 'Dieciseisavos':
+                continue
+            person = prediction['persona']
+            row = standings.get(person)
+            if not row:
+                continue
+            match_no = R32_MATCHNO_BY_PREDICTION_ORDER.get(int(prediction.get('chronological_order') or 0))
+            actual = r32_matchups.get(match_no)
+            if not actual:
+                continue
+            predicted_pair = sorted([prediction.get('local'), prediction.get('visitante')])
+            if predicted_pair == actual['teams']:
+                row['hits_r32_matchups'] += 1
+                row['matched_r32_matchups'].append(f"{match_no}:{actual['home']}-{actual['away']}")
+        for row in standings.values():
+            row['points_r32_matchups'] = 2 * row['hits_r32_matchups']
+            row['points'] += row['points_r32_matchups']
+
+    ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], -r['hits_group_positions'], -r['hits_qualified_r32'], -r['hits_r32_matchups'], r['persona'].casefold()))
     for pos, row in enumerate(ranking, start=1):
         row['position'] = pos
     data['standings'] = ranking
@@ -444,7 +550,13 @@ def merge_results(data, actual_results):
             'team_qualified': 4,
             'qualified_teams': qualified_teams,
             'qualified_by_group': qualified_by_group,
-            'note': 'Puntos actuales por equipos ya clasificados a dieciseisavos como top 2 de grupo. Los terceros no se evalúan todavía.'
+            'note': 'Puntos actuales por equipos clasificados a dieciseisavos. Antes de cerrar todos los grupos solo se evalúan top 2; con todos los grupos completos se incluyen los ocho mejores terceros.'
+        },
+        'round_of_32_matchups_current': {
+            'exact_matchup': 2,
+            'matchups': r32_matchups,
+            'prediction_order_to_match_no': R32_MATCHNO_BY_PREDICTION_ORDER,
+            'note': 'Cruces exactos de 1/16: 2 puntos por acertar el emparejamiento exacto en su número de partido.'
         }
     }
 
