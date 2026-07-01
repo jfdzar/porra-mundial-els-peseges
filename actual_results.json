@@ -574,5 +574,95 @@
     "zafronix_match_no": 72,
     "zafronix_label": "WC2026-072",
     "zafronix_as_of": "2026-06-28T13:25:40.470Z"
+  },
+  "Sudáfrica-Canadá": {
+    "local": "Sudáfrica",
+    "visitante": "Canadá",
+    "goles_local": 0,
+    "goles_visitante": 1,
+    "winner": "Canadá",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 73,
+    "zafronix_label": "WC2026-073",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "Alemania-Paraguay": {
+    "local": "Alemania",
+    "visitante": "Paraguay",
+    "goles_local": 1,
+    "goles_visitante": 1,
+    "winner": "Paraguay",
+    "penalties": {
+      "home": 3,
+      "away": 4
+    },
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 74,
+    "zafronix_label": "WC2026-074",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "Países Bajos-Marruecos": {
+    "local": "Países Bajos",
+    "visitante": "Marruecos",
+    "goles_local": 1,
+    "goles_visitante": 1,
+    "winner": "Marruecos",
+    "penalties": {
+      "home": 2,
+      "away": 3
+    },
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 75,
+    "zafronix_label": "WC2026-075",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "Brasil-Japón": {
+    "local": "Brasil",
+    "visitante": "Japón",
+    "goles_local": 2,
+    "goles_visitante": 1,
+    "winner": "Brasil",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 76,
+    "zafronix_label": "WC2026-076",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "Francia-Suecia": {
+    "local": "Francia",
+    "visitante": "Suecia",
+    "goles_local": 3,
+    "goles_visitante": 0,
+    "winner": "Francia",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 77,
+    "zafronix_label": "WC2026-077",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "Costa de Marfil-Noruega": {
+    "local": "Costa de Marfil",
+    "visitante": "Noruega",
+    "goles_local": 1,
+    "goles_visitante": 2,
+    "winner": "Noruega",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 78,
+    "zafronix_label": "WC2026-078",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
+  },
+  "México-Ecuador": {
+    "local": "México",
+    "visitante": "Ecuador",
+    "goles_local": 2,
+    "goles_visitante": 0,
+    "winner": "México",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 79,
+    "zafronix_label": "WC2026-079",
+    "zafronix_as_of": "2026-07-01T12:34:55.252Z"
   }
 }

@@ -91,6 +91,35 @@ def fetch_json(url):
 
 GROUP_POINTS_1X2 = 4
 GROUP_POINTS_EXACT = 2
+KNOCKOUT_SCORING = {
+    'Dieciseisavos': {'next_round': 'Octavos', 'team': 7, 'sign': 3, 'exact': 2},
+    'Octavos': {'next_round': 'Cuartos', 'team': 10, 'sign': 4, 'exact': 3},
+    'Cuartos': {'next_round': 'Semifinales', 'team': 15, 'sign': 7, 'exact': 6},
+    'Semifinales': {'next_round': 'Final', 'team': 20, 'sign': 9, 'exact': 8},
+    '3º/4º puesto': {'next_round': None, 'team': 0, 'sign': 10, 'exact': 9},
+    'Final': {'next_round': None, 'team': 0, 'sign': 13, 'exact': 12},
+}
+
+
+def pair_key(home, away):
+    return sorted([home, away])
+
+
+def predicted_sign_and_score_for_actual(prediction, actual_home, actual_away):
+    """Return predicted sign/result in actual match orientation, or (None, None)."""
+    if not prediction.get('local') or not prediction.get('visitante'):
+        return None, None
+    if pair_key(prediction.get('local'), prediction.get('visitante')) != pair_key(actual_home, actual_away):
+        return None, None
+    gl = prediction.get('goles_local')
+    gv = prediction.get('goles_visitante')
+    if gl is None or gv is None:
+        return None, None
+    if prediction.get('local') == actual_home and prediction.get('visitante') == actual_away:
+        home_goals, away_goals = int(gl), int(gv)
+    else:
+        home_goals, away_goals = int(gv), int(gl)
+    return result_sign(home_goals, away_goals), f'{home_goals}-{away_goals}'
 
 def result_sign(home_goals, away_goals):
     if home_goals > away_goals:
@@ -108,6 +137,21 @@ def partido_key(home, away):
     return f'{spanish_name(home)}-{spanish_name(away)}'
 
 
+def zafronix_winner_name(result, home, away):
+    winner = result.get('winner')
+    if winner == 'home':
+        return spanish_name(home)
+    if winner == 'away':
+        return spanish_name(away)
+    penalties = result.get('penalties') or {}
+    if penalties.get('home') is not None and penalties.get('away') is not None:
+        if int(penalties['home']) > int(penalties['away']):
+            return spanish_name(home)
+        if int(penalties['away']) > int(penalties['home']):
+            return spanish_name(away)
+    return None
+
+
 def collect_finished_results():
     results = {}
     source_payload = fetch_json(ZAFRONIX_PREDICTIONS)
@@ -123,8 +167,12 @@ def collect_finished_results():
         if not home or not away:
             continue
         results[partido_key(home, away)] = {
+            'local': spanish_name(home),
+            'visitante': spanish_name(away),
             'goles_local': int(result['homeScore']),
             'goles_visitante': int(result['awayScore']),
+            'winner': zafronix_winner_name(result, home, away),
+            'penalties': result.get('penalties'),
             'source': ZAFRONIX_PREDICTIONS,
             'zafronix_match_no': item.get('matchNo'),
             'zafronix_label': item.get('label'),
@@ -142,6 +190,8 @@ def collect_finished_results():
             continue
         key = partido_key(item.get('homeTeam'), item.get('awayTeam'))
         results.setdefault(key, {
+            'local': spanish_name(item.get('homeTeam')),
+            'visitante': spanish_name(item.get('awayTeam')),
             'goles_local': int(item['homeScore']),
             'goles_visitante': int(item['awayScore']),
             'source': ZAFRONIX_LIVE,
@@ -351,13 +401,20 @@ def predicted_r32_teams_by_person(data):
 
 def merge_results(data, actual_results):
     # Only real group-stage fixtures should be scored for match result points.
-    # Knockout rows are participant-specific projected brackets; current scoring
-    # only adds known R32 qualification points for teams already guaranteed top 2.
     group_matches = [m for m in data['matches'] if not m.get('is_knockout')]
+    all_known_partidos = {m['partido'] for m in data['matches']}
     known_partidos = {m['partido'] for m in group_matches}
-    unknown = sorted(set(actual_results) - known_partidos)
+    results_by_match_no = {
+        int(v['zafronix_match_no']): v
+        for v in actual_results.values()
+        if v.get('zafronix_match_no') is not None
+    }
+    unknown = sorted(
+        key for key, result in actual_results.items()
+        if key not in all_known_partidos and result.get('zafronix_match_no') not in {m.get('chronological_order') for m in data['matches']}
+    )
     if unknown:
-        print('Aviso: resultados de Zafronix no encontrados en la fase de grupos de la porra:')
+        print('Aviso: resultados de Zafronix no encontrados en la porra:')
         for key in unknown:
             print(f'  - {key}')
 
@@ -365,12 +422,30 @@ def merge_results(data, actual_results):
 
     for match in data['matches']:
         if match.get('is_knockout'):
-            match['played'] = False
-            match['actual_goles_local'] = None
-            match['actual_goles_visitante'] = None
-            match['actual_resultado'] = None
-            match['actual_signo'] = None
-            match['actual_source'] = None
+            actual = results_by_match_no.get(int(match.get('chronological_order') or 0)) or actual_results.get(match['partido'])
+            if actual:
+                gl = int(actual['goles_local'])
+                gv = int(actual['goles_visitante'])
+                match['local'] = actual.get('local') or match['local']
+                match['visitante'] = actual.get('visitante') or match['visitante']
+                match['partido'] = f"{match['local']}-{match['visitante']}"
+                match['played'] = True
+                match['actual_goles_local'] = gl
+                match['actual_goles_visitante'] = gv
+                match['actual_resultado'] = f'{gl}-{gv}'
+                match['actual_signo'] = result_sign(gl, gv)
+                match['actual_winner'] = actual.get('winner')
+                match['actual_penalties'] = actual.get('penalties')
+                match['actual_source'] = actual.get('source', 'zafronix')
+            else:
+                match['played'] = False
+                match['actual_goles_local'] = None
+                match['actual_goles_visitante'] = None
+                match['actual_resultado'] = None
+                match['actual_signo'] = None
+                match['actual_winner'] = None
+                match['actual_penalties'] = None
+                match['actual_source'] = None
             continue
         actual = valid_results.get(match['partido'])
         if actual:
@@ -381,6 +456,8 @@ def merge_results(data, actual_results):
             match['actual_goles_visitante'] = gv
             match['actual_resultado'] = f'{gl}-{gv}'
             match['actual_signo'] = result_sign(gl, gv)
+            match['actual_winner'] = actual.get('winner')
+            match['actual_penalties'] = actual.get('penalties')
             match['actual_source'] = actual.get('source', 'zafronix')
         else:
             match['played'] = False
@@ -388,19 +465,34 @@ def merge_results(data, actual_results):
             match['actual_goles_visitante'] = None
             match['actual_resultado'] = None
             match['actual_signo'] = None
+            match['actual_winner'] = None
+            match['actual_penalties'] = None
             match['actual_source'] = None
 
     matches_by_name = {m['partido']: m for m in group_matches}
+    knockout_matches_by_order = {int(m['chronological_order']): m for m in data['matches'] if m.get('is_knockout')}
     for prediction in data['predictions']:
         if prediction.get('is_knockout'):
-            prediction['played'] = False
-            prediction['actual_resultado'] = None
-            prediction['actual_signo'] = None
-            prediction['hit_1x2'] = None
-            prediction['hit_exact'] = None
+            prediction_order = int(prediction.get('chronological_order') or 0)
+            actual_order = R32_MATCHNO_BY_PREDICTION_ORDER.get(prediction_order, prediction_order) if prediction.get('jornada') == 'Dieciseisavos' else prediction_order
+            actual_match = knockout_matches_by_order.get(actual_order)
+            prediction['played'] = bool(actual_match and actual_match.get('played'))
+            prediction['actual_resultado'] = actual_match.get('actual_resultado') if prediction['played'] else None
+            prediction['actual_signo'] = actual_match.get('actual_signo') if prediction['played'] else None
+            prediction['hit_1x2'] = False if prediction['played'] else None
+            prediction['hit_exact'] = False if prediction['played'] else None
             prediction['points_1x2'] = 0
             prediction['points_exact'] = 0
             prediction['points_total'] = 0
+            if prediction['played']:
+                pred_sign, pred_result = predicted_sign_and_score_for_actual(prediction, actual_match['local'], actual_match['visitante'])
+                if pred_sign is not None:
+                    prediction['hit_1x2'] = pred_sign == actual_match['actual_signo']
+                    prediction['hit_exact'] = pred_result == actual_match['actual_resultado']
+                    scoring = KNOCKOUT_SCORING.get(prediction.get('jornada'), {})
+                    prediction['points_1x2'] = int(scoring.get('sign', 0)) if prediction['hit_1x2'] else 0
+                    prediction['points_exact'] = int(scoring.get('exact', 0)) if prediction['hit_exact'] else 0
+                    prediction['points_total'] = prediction['points_1x2'] + prediction['points_exact']
             continue
         match = matches_by_name[prediction['partido']]
         prediction['played'] = match['played']
@@ -531,6 +623,66 @@ def merge_results(data, actual_results):
             row['points_r32_matchups'] = 2 * row['hits_r32_matchups']
             row['points'] += row['points_r32_matchups']
 
+    knockout_played = [m for m in data['matches'] if m.get('is_knockout') and m.get('played')]
+    if knockout_played:
+        for row in standings.values():
+            row.setdefault('points_knockout_teams', 0)
+            row.setdefault('hits_knockout_teams', 0)
+            row.setdefault('matched_knockout_teams', [])
+            row.setdefault('points_knockout_results', 0)
+            row.setdefault('hits_knockout_1x2', 0)
+            row.setdefault('hits_knockout_exact', 0)
+            row.setdefault('matched_knockout_results', [])
+
+        predictions_by_person = {}
+        for prediction in data['predictions']:
+            if prediction.get('is_knockout'):
+                predictions_by_person.setdefault(prediction['persona'], []).append(prediction)
+
+        for match in knockout_played:
+            scoring = KNOCKOUT_SCORING.get(match.get('jornada'), {})
+            gl = int(match['actual_goles_local'])
+            gv = int(match['actual_goles_visitante'])
+            if gl == gv:
+                winner = match.get('actual_winner')
+            else:
+                winner = match['local'] if gl > gv else match['visitante']
+            next_round = scoring.get('next_round')
+            team_points = int(scoring.get('team', 0) or 0)
+            for person, person_predictions in predictions_by_person.items():
+                row = standings.get(person)
+                if not row:
+                    continue
+                if winner and next_round and team_points:
+                    next_round_teams = {
+                        team
+                        for pr in person_predictions
+                        if pr.get('jornada') == next_round
+                        for team in (pr.get('local'), pr.get('visitante'))
+                        if team
+                    }
+                    if winner in next_round_teams:
+                        row['hits_knockout_teams'] += 1
+                        row['points_knockout_teams'] += team_points
+                        row['points'] += team_points
+                        row['matched_knockout_teams'].append(f"{next_round}:{winner}")
+
+        for prediction in data['predictions']:
+            if not prediction.get('is_knockout') or not prediction.get('played'):
+                continue
+            row = standings.get(prediction['persona'])
+            if not row:
+                continue
+            points_total = int(prediction.get('points_total') or 0)
+            if points_total:
+                row['points_knockout_results'] += points_total
+                row['points'] += points_total
+                row['hits_knockout_1x2'] += int(bool(prediction.get('hit_1x2')))
+                row['hits_knockout_exact'] += int(bool(prediction.get('hit_exact')))
+                row['hits_1x2'] += int(bool(prediction.get('hit_1x2')))
+                row['hits_exact'] += int(bool(prediction.get('hit_exact')))
+                row['matched_knockout_results'].append(f"{prediction.get('chronological_order')}:{prediction.get('partido')}")
+
     ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], -r['hits_group_positions'], -r['hits_qualified_r32'], -r['hits_r32_matchups'], r['persona'].casefold()))
     for pos, row in enumerate(ranking, start=1):
         row['position'] = pos
@@ -557,13 +709,18 @@ def merge_results(data, actual_results):
             'matchups': r32_matchups,
             'prediction_order_to_match_no': R32_MATCHNO_BY_PREDICTION_ORDER,
             'note': 'Cruces exactos de 1/16: 2 puntos por acertar el emparejamiento exacto en su número de partido.'
+        },
+        'knockout_results_current': {
+            'scoring': KNOCKOUT_SCORING,
+            'played_matches': [m for m in data['matches'] if m.get('is_knockout') and m.get('played')],
+            'note': 'Puntos actuales de eliminatorias: equipos que alcanzan la siguiente ronda, signo y resultado exacto cuando el cruce del participante coincide con el cruce real.'
         }
     }
 
     data['actualResults'] = actual_results
     data['updated_at'] = datetime.now(timezone.utc).isoformat(timespec='seconds')
     data['actual_results_source'] = 'zafronix'
-    return len(valid_results)
+    return len([m for m in data['matches'] if m.get('played')])
 
 
 def main():
