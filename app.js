@@ -184,6 +184,7 @@ function currentDisputedInfo() {
   const completedGroups = Object.keys(state.data.scoring?.group_positions_current?.completed_group_positions || {}).length;
   const qualifiedTeams = (state.data.scoring?.round_of_32_qualification_current?.qualified_teams || []).length;
   const r32Matchups = Object.keys(state.data.scoring?.round_of_32_matchups_current?.matchups || {}).length;
+  const knockoutMatchups = Object.keys(state.data.scoring?.knockout_matchups_current?.matchups || {}).length;
   const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4 + r32Matchups * 2;
   const totalTournament = 1323;
   return {
@@ -192,6 +193,7 @@ function currentDisputedInfo() {
     completedPositions: completedGroups * 4,
     qualifiedTeams,
     r32Matchups,
+    knockoutMatchups,
     disputed,
     percent: totalTournament ? `${((disputed * 100) / totalTournament).toFixed(2).replace('.', ',')}%` : '',
   };
@@ -217,7 +219,7 @@ function renderScoreAuditTable() {
         <td>${Number(row.hits_group_positions || 0)}</td>
         <td>${pct(row.hits_group_positions, info.completedPositions)}</td>
         <td>${Number(row.hits_qualified_r32 || 0)}</td>
-        <td>${Number(row.hits_r32_matchups || 0)}</td>
+        <td>${Number(row.hits_r32_matchups || 0) + Number(row.hits_knockout_matchups || 0)}</td>
       </tr>
     `;
   }).join('');
@@ -246,7 +248,7 @@ function renderScoreAuditTable() {
       </thead>
       <tbody>${rows}</tbody>
     </table>
-    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16 y ${info.r32Matchups} cruces definidos de 1/16.</p>
+    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16, ${info.r32Matchups} cruces definidos de 1/16 y ${info.knockoutMatchups} cruces definidos de eliminatorias posteriores.</p>
   `;
   mount.querySelectorAll('tbody tr').forEach((row) => {
     row.addEventListener('click', () => {
@@ -267,7 +269,7 @@ function renderStandings() {
       <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
       <span class="standing-name">${escapeHtml(row.persona)}</span>
       <span class="standing-points">${row.points}<small>pts</small></span>
-      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_group_positions || 0) ? `<span class="standing-stat"><b>${row.points_group_positions}</b> pos.</span>` : ''}${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}${Number(row.points_r32_matchups || 0) ? `<span class="standing-stat"><b>${row.points_r32_matchups}</b> cruces</span>` : ''}</span>
+      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_group_positions || 0) ? `<span class="standing-stat"><b>${row.points_group_positions}</b> pos.</span>` : ''}${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}${(Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)) ? `<span class="standing-stat"><b>${Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)}</b> cruces</span>` : ''}</span>
     </button>
   `).join('');
   document.querySelectorAll('.standing-row').forEach((button) => {

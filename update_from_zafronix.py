@@ -149,6 +149,13 @@ def zafronix_winner_name(result, home, away):
             return spanish_name(home)
         if int(penalties['away']) > int(penalties['home']):
             return spanish_name(away)
+    home_score = result.get('homeScore')
+    away_score = result.get('awayScore')
+    if home_score is not None and away_score is not None:
+        if int(home_score) > int(away_score):
+            return spanish_name(home)
+        if int(away_score) > int(home_score):
+            return spanish_name(away)
     return None
 
 
@@ -189,11 +196,20 @@ def collect_finished_results():
         if (item.get('status') or '').lower() not in {'finished', 'final'}:
             continue
         key = partido_key(item.get('homeTeam'), item.get('awayTeam'))
+        home_team = item.get('homeTeam')
+        away_team = item.get('awayTeam')
         results.setdefault(key, {
-            'local': spanish_name(item.get('homeTeam')),
-            'visitante': spanish_name(item.get('awayTeam')),
+            'local': spanish_name(home_team),
+            'visitante': spanish_name(away_team),
             'goles_local': int(item['homeScore']),
             'goles_visitante': int(item['awayScore']),
+            'winner': zafronix_winner_name({
+                'homeScore': item.get('homeScore'),
+                'awayScore': item.get('awayScore'),
+                'winner': item.get('winner'),
+                'penalties': item.get('penalties'),
+            }, home_team, away_team),
+            'penalties': item.get('penalties'),
             'source': ZAFRONIX_LIVE,
             'zafronix_match_no': item.get('matchNo'),
             'zafronix_label': item.get('matchId'),
@@ -316,6 +332,22 @@ def current_r32_qualified_teams(group_matches):
     return sorted(set(qualified)), by_group_out
 
 
+OCTAVOS_MATCHNO_BY_PREDICTION_ORDER = {
+    # The prediction copy-row order has the first two Octavos slots swapped
+    # relative to Zafronix/FIFA match numbers: row 89 predicts Canada-Morocco
+    # (actual match 90), while row 90 predicts the France-side match (actual 89).
+    89: 90,
+    90: 89,
+}
+
+MATCHUP_POINTS_BY_ROUND = {
+    'Octavos': 3,
+    'Cuartos': 6,
+    'Semifinales': 8,
+    '3º/4º puesto': 9,
+    'Final': 12,
+}
+
 R32_MATCHNO_BY_PREDICTION_ORDER = {
     73: 73, 74: 76, 75: 74, 76: 75,
     77: 78, 78: 77, 79: 79, 80: 80,
@@ -399,8 +431,35 @@ def predicted_r32_teams_by_person(data):
     return out
 
 
-def merge_results(data, actual_results):
+def collect_known_knockout_fixtures():
+    """Return known Zafronix knockout fixtures, including scheduled future games.
+
+    Finished results are still imported separately; this only keeps the public
+    bracket/team labels aligned with Zafronix so exact matchup points for later
+    rounds can be calculated as soon as a fixture is known.
+    """
+    fixtures = {}
+    live_payload = fetch_json(ZAFRONIX_LIVE)
+    for section in ('recentlyFinished', 'live', 'upcoming'):
+        for item in live_payload.get(section, []):
+            match_no = item.get('matchNo')
+            home = item.get('homeTeam')
+            away = item.get('awayTeam')
+            if match_no is None or not home or not away:
+                continue
+            if int(match_no) < 73:
+                continue
+            fixtures[int(match_no)] = {
+                'local': spanish_name(home),
+                'visitante': spanish_name(away),
+                'source': ZAFRONIX_LIVE,
+            }
+    return fixtures
+
+
+def merge_results(data, actual_results, known_knockout_fixtures=None):
     # Only real group-stage fixtures should be scored for match result points.
+    known_knockout_fixtures = known_knockout_fixtures or {}
     group_matches = [m for m in data['matches'] if not m.get('is_knockout')]
     all_known_partidos = {m['partido'] for m in data['matches']}
     known_partidos = {m['partido'] for m in group_matches}
@@ -438,6 +497,11 @@ def merge_results(data, actual_results):
                 match['actual_penalties'] = actual.get('penalties')
                 match['actual_source'] = actual.get('source', 'zafronix')
             else:
+                fixture = known_knockout_fixtures.get(int(match.get('chronological_order') or 0))
+                if fixture:
+                    match['local'] = fixture['local']
+                    match['visitante'] = fixture['visitante']
+                    match['partido'] = f"{match['local']}-{match['visitante']}"
                 match['played'] = False
                 match['actual_goles_local'] = None
                 match['actual_goles_visitante'] = None
@@ -474,7 +538,12 @@ def merge_results(data, actual_results):
     for prediction in data['predictions']:
         if prediction.get('is_knockout'):
             prediction_order = int(prediction.get('chronological_order') or 0)
-            actual_order = R32_MATCHNO_BY_PREDICTION_ORDER.get(prediction_order, prediction_order) if prediction.get('jornada') == 'Dieciseisavos' else prediction_order
+            if prediction.get('jornada') == 'Dieciseisavos':
+                actual_order = R32_MATCHNO_BY_PREDICTION_ORDER.get(prediction_order, prediction_order)
+            elif prediction.get('jornada') == 'Octavos':
+                actual_order = OCTAVOS_MATCHNO_BY_PREDICTION_ORDER.get(prediction_order, prediction_order)
+            else:
+                actual_order = prediction_order
             actual_match = knockout_matches_by_order.get(actual_order)
             prediction['played'] = bool(actual_match and actual_match.get('played'))
             prediction['actual_resultado'] = actual_match.get('actual_resultado') if prediction['played'] else None
@@ -623,6 +692,44 @@ def merge_results(data, actual_results):
             row['points_r32_matchups'] = 2 * row['hits_r32_matchups']
             row['points'] += row['points_r32_matchups']
 
+    known_fixture_orders = set(known_knockout_fixtures)
+    knockout_matchups = {
+        int(m.get('chronological_order') or 0): m
+        for m in data['matches']
+        if m.get('is_knockout')
+        and m.get('jornada') in MATCHUP_POINTS_BY_ROUND
+        and m.get('local')
+        and m.get('visitante')
+        and (m.get('played') or int(m.get('chronological_order') or 0) in known_fixture_orders)
+    }
+    if knockout_matchups:
+        for row in standings.values():
+            row.setdefault('points_knockout_matchups', 0)
+            row.setdefault('hits_knockout_matchups', 0)
+            row.setdefault('matched_knockout_matchups', [])
+        for prediction in data['predictions']:
+            if not prediction.get('is_knockout') or prediction.get('jornada') not in MATCHUP_POINTS_BY_ROUND:
+                continue
+            prediction_order = int(prediction.get('chronological_order') or 0)
+            if prediction.get('jornada') == 'Octavos':
+                actual_order = OCTAVOS_MATCHNO_BY_PREDICTION_ORDER.get(prediction_order, prediction_order)
+            else:
+                actual_order = prediction_order
+            actual = knockout_matchups.get(actual_order)
+            if not actual:
+                continue
+            predicted_pair = sorted([prediction.get('local'), prediction.get('visitante')])
+            actual_pair = sorted([actual.get('local'), actual.get('visitante')])
+            if predicted_pair == actual_pair:
+                row = standings.get(prediction['persona'])
+                if not row:
+                    continue
+                points = int(MATCHUP_POINTS_BY_ROUND[prediction.get('jornada')])
+                row['hits_knockout_matchups'] += 1
+                row['points_knockout_matchups'] += points
+                row['points'] += points
+                row['matched_knockout_matchups'].append(f"{actual_order}:{actual['local']}-{actual['visitante']}")
+
     knockout_played = [m for m in data['matches'] if m.get('is_knockout') and m.get('played')]
     if knockout_played:
         for row in standings.values():
@@ -710,6 +817,20 @@ def merge_results(data, actual_results):
             'prediction_order_to_match_no': R32_MATCHNO_BY_PREDICTION_ORDER,
             'note': 'Cruces exactos de 1/16: 2 puntos por acertar el emparejamiento exacto en su número de partido.'
         },
+        'knockout_matchups_current': {
+            'exact_matchup_by_round': MATCHUP_POINTS_BY_ROUND,
+            'matchups': {
+                str(order): {
+                    'jornada': match.get('jornada'),
+                    'home': match.get('local'),
+                    'away': match.get('visitante'),
+                    'played': bool(match.get('played')),
+                }
+                for order, match in sorted(knockout_matchups.items())
+            },
+            'octavos_prediction_order_to_match_no': OCTAVOS_MATCHNO_BY_PREDICTION_ORDER,
+            'note': 'Cruces exactos de eliminatorias posteriores: puntos por acertar el emparejamiento exacto cuando Zafronix ya ha definido el partido.'
+        },
         'knockout_results_current': {
             'scoring': KNOCKOUT_SCORING,
             'played_matches': [m for m in data['matches'] if m.get('is_knockout') and m.get('played')],
@@ -730,7 +851,8 @@ def main():
     # predictions payload; dropping them would incorrectly remove points.
     previous_results = json.loads(RESULTS_PATH.read_text(encoding='utf-8')) if RESULTS_PATH.exists() else {}
     actual_results = {**previous_results, **collect_finished_results()}
-    count = merge_results(data, actual_results)
+    known_knockout_fixtures = collect_known_knockout_fixtures()
+    count = merge_results(data, actual_results, known_knockout_fixtures)
     DATA_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
     RESULTS_PATH.write_text(json.dumps(actual_results, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'Actualizados {count} partidos finalizados desde Zafronix')
