@@ -1785,13 +1785,13 @@
       "local": "México",
       "visitante": "Inglaterra",
       "is_knockout": true,
-      "played": false,
-      "actual_goles_local": null,
-      "actual_goles_visitante": null,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "actual_source": null,
-      "actual_winner": null,
+      "played": true,
+      "actual_goles_local": 2,
+      "actual_goles_visitante": 3,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "actual_source": "https://api.zafronix.com/live-feed/predictions",
+      "actual_winner": "Inglaterra",
       "actual_penalties": null
     },
     {
@@ -1919,10 +1919,10 @@
       "phase": "Eliminatorias",
       "jornada": "Cuartos",
       "grupo": "Eliminatorias",
-      "partido": "Marruecos-Inglaterra",
+      "partido": "Noruega-Inglaterra",
       "chronological_order": 99,
       "datetime_label": "Cuartos",
-      "local": "Marruecos",
+      "local": "Noruega",
       "visitante": "Inglaterra",
       "is_knockout": true,
       "played": false,
@@ -29586,14 +29586,14 @@
       "resultado": "1-3",
       "goles_local": 1,
       "goles_visitante": 3,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -30482,14 +30482,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -31378,11 +31378,11 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0,
@@ -32274,14 +32274,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -33170,14 +33170,14 @@
       "resultado": "1-3",
       "goles_local": 1,
       "goles_visitante": 3,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -34066,14 +34066,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -34962,14 +34962,14 @@
       "resultado": "0-1",
       "goles_local": 0,
       "goles_visitante": 1,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -35858,11 +35858,11 @@
       "resultado": "1-1",
       "goles_local": 1,
       "goles_visitante": 1,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0,
@@ -36754,14 +36754,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -37650,11 +37650,11 @@
       "resultado": "0-1",
       "goles_local": 0,
       "goles_visitante": 1,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0,
@@ -38546,11 +38546,11 @@
       "resultado": "0-2",
       "goles_local": 0,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": false,
+      "hit_exact": false,
       "points_1x2": 0,
       "points_exact": 0,
       "points_total": 0,
@@ -39442,14 +39442,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -40338,14 +40338,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -41234,14 +41234,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -42130,14 +42130,14 @@
       "resultado": "1-2",
       "goles_local": 1,
       "goles_visitante": 2,
-      "played": false,
-      "actual_resultado": null,
-      "actual_signo": null,
-      "hit_1x2": null,
-      "hit_exact": null,
-      "points_1x2": 0,
+      "played": true,
+      "actual_resultado": "2-3",
+      "actual_signo": "2",
+      "hit_1x2": true,
+      "hit_exact": false,
+      "points_1x2": 4,
       "points_exact": 0,
-      "points_total": 0,
+      "points_total": 4,
       "is_knockout": true
     },
     {
@@ -43064,7 +43064,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 73,
       "zafronix_label": "WC2026-073",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Alemania-Paraguay": {
       "local": "Alemania",
@@ -43079,7 +43079,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 74,
       "zafronix_label": "WC2026-074",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Países Bajos-Marruecos": {
       "local": "Países Bajos",
@@ -43094,7 +43094,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 75,
       "zafronix_label": "WC2026-075",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Brasil-Japón": {
       "local": "Brasil",
@@ -43106,7 +43106,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 76,
       "zafronix_label": "WC2026-076",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Francia-Suecia": {
       "local": "Francia",
@@ -43118,7 +43118,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 77,
       "zafronix_label": "WC2026-077",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Costa de Marfil-Noruega": {
       "local": "Costa de Marfil",
@@ -43130,7 +43130,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 78,
       "zafronix_label": "WC2026-078",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "México-Ecuador": {
       "local": "México",
@@ -43142,7 +43142,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 79,
       "zafronix_label": "WC2026-079",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Inglaterra-RD Congo": {
       "local": "Inglaterra",
@@ -43154,7 +43154,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 80,
       "zafronix_label": "WC2026-080",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Estados Unidos-Bosnia y Herzegovina": {
       "local": "Estados Unidos",
@@ -43166,7 +43166,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 81,
       "zafronix_label": "WC2026-081",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Bélgica-Senegal": {
       "local": "Bélgica",
@@ -43178,7 +43178,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 82,
       "zafronix_label": "WC2026-082",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Portugal-Croacia": {
       "local": "Portugal",
@@ -43190,7 +43190,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 83,
       "zafronix_label": "WC2026-083",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "España-Austria": {
       "local": "España",
@@ -43202,7 +43202,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 84,
       "zafronix_label": "WC2026-084",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Suiza-Argelia": {
       "local": "Suiza",
@@ -43214,7 +43214,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 85,
       "zafronix_label": "WC2026-085",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Australia-Egipto": {
       "local": "Australia",
@@ -43229,7 +43229,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 88,
       "zafronix_label": "WC2026-088",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Argentina-Cabo Verde": {
       "local": "Argentina",
@@ -43241,7 +43241,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 86,
       "zafronix_label": "WC2026-086",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Colombia-Ghana": {
       "local": "Colombia",
@@ -43253,7 +43253,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 87,
       "zafronix_label": "WC2026-087",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     },
     "Canadá-Marruecos": {
       "local": "Canadá",
@@ -43265,7 +43265,7 @@
       "source": "https://api.zafronix.com/live-feed",
       "zafronix_match_no": 90,
       "zafronix_label": "2026-090",
-      "zafronix_as_of": "2026-07-05T22:30:17.985Z"
+      "zafronix_as_of": "2026-07-06T06:30:19.628Z"
     },
     "Paraguay-Francia": {
       "local": "Paraguay",
@@ -43277,7 +43277,7 @@
       "source": "https://api.zafronix.com/live-feed",
       "zafronix_match_no": 89,
       "zafronix_label": "2026-089",
-      "zafronix_as_of": "2026-07-05T22:30:17.985Z"
+      "zafronix_as_of": "2026-07-06T06:30:19.628Z"
     },
     "Brasil-Noruega": {
       "local": "Brasil",
@@ -43289,15 +43289,27 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 91,
       "zafronix_label": "WC2026-091",
-      "zafronix_as_of": "2026-07-05T22:30:16.923Z"
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
+    },
+    "México-Inglaterra": {
+      "local": "México",
+      "visitante": "Inglaterra",
+      "goles_local": 2,
+      "goles_visitante": 3,
+      "winner": "Inglaterra",
+      "penalties": null,
+      "source": "https://api.zafronix.com/live-feed/predictions",
+      "zafronix_match_no": 92,
+      "zafronix_label": "WC2026-092",
+      "zafronix_as_of": "2026-07-06T06:29:49.967Z"
     }
   },
-  "updated_at": "2026-07-05T22:30:18+00:00",
+  "updated_at": "2026-07-06T06:30:20+00:00",
   "actual_results_source": "zafronix",
   "standings": [
     {
       "persona": "Narx",
-      "points": 545,
+      "points": 555,
       "played": 72,
       "hits_1x2": 51,
       "hits_exact": 12,
@@ -43391,8 +43403,8 @@
         "94:Estados Unidos-Bélgica",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 118,
-      "hits_knockout_teams": 16,
+      "points_knockout_teams": 128,
+      "hits_knockout_teams": 17,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Marruecos",
@@ -43409,7 +43421,8 @@
         "Octavos:Argentina",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
       "points_knockout_results": 23,
       "hits_knockout_1x2": 6,
@@ -43426,9 +43439,9 @@
     },
     {
       "persona": "Dry Mouth",
-      "points": 524,
+      "points": 538,
       "played": 72,
-      "hits_1x2": 52,
+      "hits_1x2": 53,
       "hits_exact": 10,
       "points_1x2": 188,
       "points_exact": 16,
@@ -43513,8 +43526,8 @@
         "94:Estados Unidos-Bélgica",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 111,
-      "hits_knockout_teams": 15,
+      "points_knockout_teams": 121,
+      "hits_knockout_teams": 16,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Marruecos",
@@ -43530,25 +43543,27 @@
         "Octavos:Argentina",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 20,
-      "hits_knockout_1x2": 5,
+      "points_knockout_results": 24,
+      "hits_knockout_1x2": 6,
       "hits_knockout_exact": 2,
       "matched_knockout_results": [
         "74:Brasil-Japón",
         "76:Países Bajos-Marruecos",
         "78:Francia-Suecia",
         "83:España-Austria",
-        "89:Canadá-Marruecos"
+        "89:Canadá-Marruecos",
+        "92:México-Inglaterra"
       ],
       "position": 2
     },
     {
       "persona": "Raúl",
-      "points": 522,
+      "points": 536,
       "played": 72,
-      "hits_1x2": 47,
+      "hits_1x2": 48,
       "hits_exact": 13,
       "points_1x2": 180,
       "points_exact": 24,
@@ -43636,8 +43651,8 @@
         "94:Estados Unidos-Bélgica",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 111,
-      "hits_knockout_teams": 15,
+      "points_knockout_teams": 121,
+      "hits_knockout_teams": 16,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Marruecos",
@@ -43653,22 +43668,24 @@
         "Octavos:Argentina",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 9,
-      "hits_knockout_1x2": 2,
+      "points_knockout_results": 13,
+      "hits_knockout_1x2": 3,
       "hits_knockout_exact": 1,
       "matched_knockout_results": [
         "82:Estados Unidos-Bosnia y Herzegovina",
-        "89:Canadá-Marruecos"
+        "89:Canadá-Marruecos",
+        "92:México-Inglaterra"
       ],
       "position": 3
     },
     {
       "persona": "Fiti",
-      "points": 494,
+      "points": 508,
       "played": 72,
-      "hits_1x2": 48,
+      "hits_1x2": 49,
       "hits_exact": 8,
       "points_1x2": 188,
       "points_exact": 16,
@@ -43749,8 +43766,8 @@
         "95:Argentina-Egipto",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 104,
-      "hits_knockout_teams": 14,
+      "points_knockout_teams": 114,
+      "hits_knockout_teams": 15,
       "matched_knockout_teams": [
         "Octavos:Marruecos",
         "Octavos:Brasil",
@@ -43765,21 +43782,23 @@
         "Octavos:Argentina",
         "Octavos:Egipto",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 3,
-      "hits_knockout_1x2": 1,
+      "points_knockout_results": 7,
+      "hits_knockout_1x2": 2,
       "hits_knockout_exact": 0,
       "matched_knockout_results": [
-        "78:Francia-Suecia"
+        "78:Francia-Suecia",
+        "92:México-Inglaterra"
       ],
       "position": 4
     },
     {
       "persona": "Marcos",
-      "points": 480,
+      "points": 494,
       "played": 72,
-      "hits_1x2": 45,
+      "hits_1x2": 46,
       "hits_exact": 8,
       "points_1x2": 164,
       "points_exact": 14,
@@ -43866,8 +43885,8 @@
         "92:México-Inglaterra",
         "94:Estados Unidos-Bélgica"
       ],
-      "points_knockout_teams": 101,
-      "hits_knockout_teams": 14,
+      "points_knockout_teams": 111,
+      "hits_knockout_teams": 15,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Brasil",
@@ -43882,24 +43901,26 @@
         "Octavos:Suiza",
         "Octavos:Argentina",
         "Octavos:Colombia",
-        "Cuartos:Francia"
+        "Cuartos:Francia",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 14,
-      "hits_knockout_1x2": 4,
+      "points_knockout_results": 18,
+      "hits_knockout_1x2": 5,
       "hits_knockout_exact": 1,
       "matched_knockout_results": [
         "74:Brasil-Japón",
         "78:Francia-Suecia",
         "82:Estados Unidos-Bosnia y Herzegovina",
-        "83:España-Austria"
+        "83:España-Austria",
+        "92:México-Inglaterra"
       ],
       "position": 5
     },
     {
       "persona": "David García Martín",
-      "points": 479,
+      "points": 493,
       "played": 72,
-      "hits_1x2": 45,
+      "hits_1x2": 46,
       "hits_exact": 4,
       "points_1x2": 160,
       "points_exact": 8,
@@ -43985,8 +44006,8 @@
         "95:Argentina-Egipto",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 104,
-      "hits_knockout_teams": 14,
+      "points_knockout_teams": 114,
+      "hits_knockout_teams": 15,
       "matched_knockout_teams": [
         "Octavos:Marruecos",
         "Octavos:Brasil",
@@ -44001,23 +44022,135 @@
         "Octavos:Colombia",
         "Octavos:Egipto",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 15,
-      "hits_knockout_1x2": 5,
+      "points_knockout_results": 19,
+      "hits_knockout_1x2": 6,
       "hits_knockout_exact": 0,
       "matched_knockout_results": [
         "74:Brasil-Japón",
         "76:Países Bajos-Marruecos",
         "78:Francia-Suecia",
         "83:España-Austria",
-        "85:Suiza-Argelia"
+        "85:Suiza-Argelia",
+        "92:México-Inglaterra"
       ],
       "position": 6
     },
     {
+      "persona": "Victor",
+      "points": 489,
+      "played": 72,
+      "hits_1x2": 47,
+      "hits_exact": 9,
+      "points_1x2": 176,
+      "points_exact": 16,
+      "points_group_positions": 52,
+      "hits_group_positions": 26,
+      "matched_group_positions": [
+        "A1:México",
+        "B1:Suiza",
+        "B4:Catar",
+        "C1:Brasil",
+        "C2:Marruecos",
+        "C3:Escocia",
+        "C4:Haití",
+        "E1:Alemania",
+        "E4:Curazao",
+        "F1:Países Bajos",
+        "F2:Japón",
+        "F3:Suecia",
+        "F4:Túnez",
+        "G3:Irán",
+        "G4:Nueva Zelanda",
+        "H1:España",
+        "I1:Francia",
+        "I2:Noruega",
+        "I3:Senegal",
+        "I4:Irak",
+        "J1:Argentina",
+        "J4:Jordania",
+        "K3:RD Congo",
+        "K4:Uzbekistán",
+        "L1:Inglaterra",
+        "L4:Panamá"
+      ],
+      "points_qualified_r32": 104,
+      "hits_qualified_r32": 26,
+      "matched_qualified_r32": [
+        "Alemania",
+        "Argelia",
+        "Argentina",
+        "Bosnia y Herzegovina",
+        "Brasil",
+        "Bélgica",
+        "Canadá",
+        "Colombia",
+        "Costa de Marfil",
+        "Croacia",
+        "Ecuador",
+        "Egipto",
+        "España",
+        "Francia",
+        "Ghana",
+        "Inglaterra",
+        "Japón",
+        "Marruecos",
+        "México",
+        "Noruega",
+        "Paraguay",
+        "Países Bajos",
+        "Portugal",
+        "Senegal",
+        "Suecia",
+        "Suiza"
+      ],
+      "points_r32_matchups": 6,
+      "hits_r32_matchups": 3,
+      "matched_r32_matchups": [
+        "76:Brasil-Japón",
+        "75:Países Bajos-Marruecos",
+        "77:Francia-Suecia"
+      ],
+      "points_knockout_matchups": 9,
+      "hits_knockout_matchups": 2,
+      "matched_knockout_matchups": [
+        "92:México-Inglaterra",
+        "97:Francia-Marruecos"
+      ],
+      "points_knockout_teams": 114,
+      "hits_knockout_teams": 15,
+      "matched_knockout_teams": [
+        "Octavos:Paraguay",
+        "Octavos:Marruecos",
+        "Octavos:Brasil",
+        "Octavos:Francia",
+        "Octavos:México",
+        "Octavos:Inglaterra",
+        "Octavos:Portugal",
+        "Octavos:España",
+        "Octavos:Suiza",
+        "Octavos:Argentina",
+        "Octavos:Colombia",
+        "Octavos:Egipto",
+        "Cuartos:Francia",
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
+      ],
+      "points_knockout_results": 12,
+      "hits_knockout_1x2": 3,
+      "hits_knockout_exact": 1,
+      "matched_knockout_results": [
+        "74:Brasil-Japón",
+        "78:Francia-Suecia",
+        "92:México-Inglaterra"
+      ],
+      "position": 7
+    },
+    {
       "persona": "Vicente Hernández Ruiz",
-      "points": 477,
+      "points": 487,
       "played": 72,
       "hits_1x2": 46,
       "hits_exact": 10,
@@ -44103,8 +44236,8 @@
         "91:Brasil-Noruega",
         "94:Estados Unidos-Bélgica"
       ],
-      "points_knockout_teams": 94,
-      "hits_knockout_teams": 13,
+      "points_knockout_teams": 104,
+      "hits_knockout_teams": 14,
       "matched_knockout_teams": [
         "Octavos:Brasil",
         "Octavos:Francia",
@@ -44118,7 +44251,8 @@
         "Octavos:Suiza",
         "Octavos:Argentina",
         "Octavos:Colombia",
-        "Cuartos:Francia"
+        "Cuartos:Francia",
+        "Cuartos:Inglaterra"
       ],
       "points_knockout_results": 11,
       "hits_knockout_1x2": 3,
@@ -44128,121 +44262,13 @@
         "82:Estados Unidos-Bosnia y Herzegovina",
         "83:España-Austria"
       ],
-      "position": 7
-    },
-    {
-      "persona": "Victor",
-      "points": 475,
-      "played": 72,
-      "hits_1x2": 46,
-      "hits_exact": 9,
-      "points_1x2": 176,
-      "points_exact": 16,
-      "points_group_positions": 52,
-      "hits_group_positions": 26,
-      "matched_group_positions": [
-        "A1:México",
-        "B1:Suiza",
-        "B4:Catar",
-        "C1:Brasil",
-        "C2:Marruecos",
-        "C3:Escocia",
-        "C4:Haití",
-        "E1:Alemania",
-        "E4:Curazao",
-        "F1:Países Bajos",
-        "F2:Japón",
-        "F3:Suecia",
-        "F4:Túnez",
-        "G3:Irán",
-        "G4:Nueva Zelanda",
-        "H1:España",
-        "I1:Francia",
-        "I2:Noruega",
-        "I3:Senegal",
-        "I4:Irak",
-        "J1:Argentina",
-        "J4:Jordania",
-        "K3:RD Congo",
-        "K4:Uzbekistán",
-        "L1:Inglaterra",
-        "L4:Panamá"
-      ],
-      "points_qualified_r32": 104,
-      "hits_qualified_r32": 26,
-      "matched_qualified_r32": [
-        "Alemania",
-        "Argelia",
-        "Argentina",
-        "Bosnia y Herzegovina",
-        "Brasil",
-        "Bélgica",
-        "Canadá",
-        "Colombia",
-        "Costa de Marfil",
-        "Croacia",
-        "Ecuador",
-        "Egipto",
-        "España",
-        "Francia",
-        "Ghana",
-        "Inglaterra",
-        "Japón",
-        "Marruecos",
-        "México",
-        "Noruega",
-        "Paraguay",
-        "Países Bajos",
-        "Portugal",
-        "Senegal",
-        "Suecia",
-        "Suiza"
-      ],
-      "points_r32_matchups": 6,
-      "hits_r32_matchups": 3,
-      "matched_r32_matchups": [
-        "76:Brasil-Japón",
-        "75:Países Bajos-Marruecos",
-        "77:Francia-Suecia"
-      ],
-      "points_knockout_matchups": 9,
-      "hits_knockout_matchups": 2,
-      "matched_knockout_matchups": [
-        "92:México-Inglaterra",
-        "97:Francia-Marruecos"
-      ],
-      "points_knockout_teams": 104,
-      "hits_knockout_teams": 14,
-      "matched_knockout_teams": [
-        "Octavos:Paraguay",
-        "Octavos:Marruecos",
-        "Octavos:Brasil",
-        "Octavos:Francia",
-        "Octavos:México",
-        "Octavos:Inglaterra",
-        "Octavos:Portugal",
-        "Octavos:España",
-        "Octavos:Suiza",
-        "Octavos:Argentina",
-        "Octavos:Colombia",
-        "Octavos:Egipto",
-        "Cuartos:Francia",
-        "Cuartos:Marruecos"
-      ],
-      "points_knockout_results": 8,
-      "hits_knockout_1x2": 2,
-      "hits_knockout_exact": 1,
-      "matched_knockout_results": [
-        "74:Brasil-Japón",
-        "78:Francia-Suecia"
-      ],
       "position": 8
     },
     {
       "persona": "Hector",
-      "points": 472,
+      "points": 486,
       "played": 72,
-      "hits_1x2": 41,
+      "hits_1x2": 42,
       "hits_exact": 12,
       "points_1x2": 144,
       "points_exact": 18,
@@ -44332,8 +44358,8 @@
         "94:Estados Unidos-Bélgica",
         "96:Suiza-Colombia"
       ],
-      "points_knockout_teams": 94,
-      "hits_knockout_teams": 13,
+      "points_knockout_teams": 104,
+      "hits_knockout_teams": 14,
       "matched_knockout_teams": [
         "Octavos:Brasil",
         "Octavos:Francia",
@@ -44347,25 +44373,27 @@
         "Octavos:Suiza",
         "Octavos:Argentina",
         "Octavos:Colombia",
-        "Cuartos:Francia"
+        "Cuartos:Francia",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 21,
-      "hits_knockout_1x2": 5,
+      "points_knockout_results": 25,
+      "hits_knockout_1x2": 6,
       "hits_knockout_exact": 3,
       "matched_knockout_results": [
         "74:Brasil-Japón",
         "76:Países Bajos-Marruecos",
         "83:España-Austria",
         "84:Portugal-Croacia",
-        "88:Colombia-Ghana"
+        "88:Colombia-Ghana",
+        "92:México-Inglaterra"
       ],
       "position": 9
     },
     {
       "persona": "Havier",
-      "points": 471,
+      "points": 485,
       "played": 72,
-      "hits_1x2": 42,
+      "hits_1x2": 43,
       "hits_exact": 11,
       "points_1x2": 152,
       "points_exact": 18,
@@ -44445,8 +44473,8 @@
         "94:Estados Unidos-Bélgica",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 111,
-      "hits_knockout_teams": 15,
+      "points_knockout_teams": 121,
+      "hits_knockout_teams": 16,
       "matched_knockout_teams": [
         "Octavos:Paraguay",
         "Octavos:Marruecos",
@@ -44462,22 +44490,24 @@
         "Octavos:Argentina",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 16,
-      "hits_knockout_1x2": 4,
+      "points_knockout_results": 20,
+      "hits_knockout_1x2": 5,
       "hits_knockout_exact": 2,
       "matched_knockout_results": [
         "74:Brasil-Japón",
         "78:Francia-Suecia",
         "82:Estados Unidos-Bosnia y Herzegovina",
-        "83:España-Austria"
+        "83:España-Austria",
+        "92:México-Inglaterra"
       ],
       "position": 10
     },
     {
       "persona": "Pepunto",
-      "points": 467,
+      "points": 483,
       "played": 72,
       "hits_1x2": 43,
       "hits_exact": 8,
@@ -44555,14 +44585,15 @@
         "77:Francia-Suecia",
         "84:España-Austria"
       ],
-      "points_knockout_matchups": 6,
-      "hits_knockout_matchups": 2,
+      "points_knockout_matchups": 12,
+      "hits_knockout_matchups": 3,
       "matched_knockout_matchups": [
         "91:Brasil-Noruega",
-        "94:Estados Unidos-Bélgica"
+        "94:Estados Unidos-Bélgica",
+        "99:Noruega-Inglaterra"
       ],
-      "points_knockout_teams": 104,
-      "hits_knockout_teams": 14,
+      "points_knockout_teams": 114,
+      "hits_knockout_teams": 15,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Marruecos",
@@ -44577,7 +44608,8 @@
         "Octavos:Suiza",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Noruega"
+        "Cuartos:Noruega",
+        "Cuartos:Inglaterra"
       ],
       "points_knockout_results": 11,
       "hits_knockout_1x2": 3,
@@ -44591,9 +44623,9 @@
     },
     {
       "persona": "Manu",
-      "points": 466,
+      "points": 480,
       "played": 72,
-      "hits_1x2": 42,
+      "hits_1x2": 43,
       "hits_exact": 11,
       "points_1x2": 164,
       "points_exact": 22,
@@ -44669,8 +44701,8 @@
         "92:México-Inglaterra",
         "97:Francia-Marruecos"
       ],
-      "points_knockout_teams": 104,
-      "hits_knockout_teams": 14,
+      "points_knockout_teams": 114,
+      "hits_knockout_teams": 15,
       "matched_knockout_teams": [
         "Octavos:Paraguay",
         "Octavos:Marruecos",
@@ -44685,21 +44717,23 @@
         "Octavos:Argentina",
         "Octavos:Colombia",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 3,
-      "hits_knockout_1x2": 1,
+      "points_knockout_results": 7,
+      "hits_knockout_1x2": 2,
       "hits_knockout_exact": 0,
       "matched_knockout_results": [
-        "76:Países Bajos-Marruecos"
+        "76:Países Bajos-Marruecos",
+        "92:México-Inglaterra"
       ],
       "position": 12
     },
     {
       "persona": "Juan",
-      "points": 464,
+      "points": 478,
       "played": 72,
-      "hits_1x2": 49,
+      "hits_1x2": 50,
       "hits_exact": 11,
       "points_1x2": 188,
       "points_exact": 22,
@@ -44778,8 +44812,8 @@
         "92:México-Inglaterra",
         "94:Estados Unidos-Bélgica"
       ],
-      "points_knockout_teams": 80,
-      "hits_knockout_teams": 11,
+      "points_knockout_teams": 90,
+      "hits_knockout_teams": 12,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Francia",
@@ -44791,22 +44825,24 @@
         "Octavos:España",
         "Octavos:Suiza",
         "Octavos:Argentina",
-        "Cuartos:Francia"
+        "Cuartos:Francia",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 6,
-      "hits_knockout_1x2": 2,
+      "points_knockout_results": 10,
+      "hits_knockout_1x2": 3,
       "hits_knockout_exact": 0,
       "matched_knockout_results": [
         "83:España-Austria",
-        "85:Suiza-Argelia"
+        "85:Suiza-Argelia",
+        "92:México-Inglaterra"
       ],
       "position": 13
     },
     {
       "persona": "Dj Pino",
-      "points": 442,
+      "points": 456,
       "played": 72,
-      "hits_1x2": 42,
+      "hits_1x2": 43,
       "hits_exact": 6,
       "points_1x2": 156,
       "points_exact": 10,
@@ -44886,8 +44922,8 @@
       "matched_knockout_matchups": [
         "92:México-Inglaterra"
       ],
-      "points_knockout_teams": 90,
-      "hits_knockout_teams": 12,
+      "points_knockout_teams": 100,
+      "hits_knockout_teams": 13,
       "matched_knockout_teams": [
         "Octavos:Canadá",
         "Octavos:Marruecos",
@@ -44900,15 +44936,17 @@
         "Octavos:España",
         "Octavos:Argentina",
         "Cuartos:Francia",
-        "Cuartos:Marruecos"
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra"
       ],
-      "points_knockout_results": 11,
-      "hits_knockout_1x2": 3,
+      "points_knockout_results": 15,
+      "hits_knockout_1x2": 4,
       "hits_knockout_exact": 1,
       "matched_knockout_results": [
         "77:Costa de Marfil-Noruega",
         "79:México-Ecuador",
-        "83:España-Austria"
+        "83:España-Austria",
+        "92:México-Inglaterra"
       ],
       "position": 14
     },
@@ -45379,7 +45417,7 @@
           "jornada": "Octavos",
           "home": "México",
           "away": "Inglaterra",
-          "played": false
+          "played": true
         },
         "93": {
           "jornada": "Octavos",
@@ -45409,6 +45447,12 @@
           "jornada": "Cuartos",
           "home": "Francia",
           "away": "Marruecos",
+          "played": false
+        },
+        "99": {
+          "jornada": "Cuartos",
+          "home": "Noruega",
+          "away": "Inglaterra",
           "played": false
         }
       },
@@ -45845,6 +45889,26 @@
           "actual_signo": "2",
           "actual_source": "https://api.zafronix.com/live-feed/predictions",
           "actual_winner": "Noruega",
+          "actual_penalties": null
+        },
+        {
+          "id": "KO-92",
+          "phase": "Eliminatorias",
+          "jornada": "Octavos",
+          "grupo": "Eliminatorias",
+          "partido": "México-Inglaterra",
+          "chronological_order": 92,
+          "datetime_label": "Octavos",
+          "local": "México",
+          "visitante": "Inglaterra",
+          "is_knockout": true,
+          "played": true,
+          "actual_goles_local": 2,
+          "actual_goles_visitante": 3,
+          "actual_resultado": "2-3",
+          "actual_signo": "2",
+          "actual_source": "https://api.zafronix.com/live-feed/predictions",
+          "actual_winner": "Inglaterra",
           "actual_penalties": null
         }
       ],
