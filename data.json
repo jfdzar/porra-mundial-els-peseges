@@ -1871,8 +1871,11 @@
       "actual_resultado": "0-0",
       "actual_signo": "X",
       "actual_source": "https://api.zafronix.com/live-feed/predictions",
-      "actual_winner": null,
-      "actual_penalties": null
+      "actual_winner": "Suiza",
+      "actual_penalties": {
+        "home": 4,
+        "away": 3
+      }
     },
     {
       "id": "KO-97",
@@ -1939,11 +1942,11 @@
       "phase": "Eliminatorias",
       "jornada": "Cuartos",
       "grupo": "Eliminatorias",
-      "partido": "Argentina-Portugal",
+      "partido": "Argentina-Suiza",
       "chronological_order": 100,
       "datetime_label": "Cuartos",
       "local": "Argentina",
-      "visitante": "Portugal",
+      "visitante": "Suiza",
       "is_knockout": true,
       "played": false,
       "actual_goles_local": null,
@@ -43064,7 +43067,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 73,
       "zafronix_label": "WC2026-073",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Alemania-Paraguay": {
       "local": "Alemania",
@@ -43079,7 +43082,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 74,
       "zafronix_label": "WC2026-074",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Países Bajos-Marruecos": {
       "local": "Países Bajos",
@@ -43094,7 +43097,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 75,
       "zafronix_label": "WC2026-075",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Brasil-Japón": {
       "local": "Brasil",
@@ -43106,7 +43109,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 76,
       "zafronix_label": "WC2026-076",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Francia-Suecia": {
       "local": "Francia",
@@ -43118,7 +43121,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 77,
       "zafronix_label": "WC2026-077",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Costa de Marfil-Noruega": {
       "local": "Costa de Marfil",
@@ -43130,7 +43133,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 78,
       "zafronix_label": "WC2026-078",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "México-Ecuador": {
       "local": "México",
@@ -43142,7 +43145,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 79,
       "zafronix_label": "WC2026-079",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Inglaterra-RD Congo": {
       "local": "Inglaterra",
@@ -43154,7 +43157,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 80,
       "zafronix_label": "WC2026-080",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Estados Unidos-Bosnia y Herzegovina": {
       "local": "Estados Unidos",
@@ -43166,7 +43169,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 81,
       "zafronix_label": "WC2026-081",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Bélgica-Senegal": {
       "local": "Bélgica",
@@ -43178,7 +43181,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 82,
       "zafronix_label": "WC2026-082",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Portugal-Croacia": {
       "local": "Portugal",
@@ -43190,7 +43193,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 83,
       "zafronix_label": "WC2026-083",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "España-Austria": {
       "local": "España",
@@ -43202,7 +43205,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 84,
       "zafronix_label": "WC2026-084",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Suiza-Argelia": {
       "local": "Suiza",
@@ -43214,7 +43217,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 85,
       "zafronix_label": "WC2026-085",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Australia-Egipto": {
       "local": "Australia",
@@ -43229,7 +43232,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 88,
       "zafronix_label": "WC2026-088",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Argentina-Cabo Verde": {
       "local": "Argentina",
@@ -43241,7 +43244,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 86,
       "zafronix_label": "WC2026-086",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Colombia-Ghana": {
       "local": "Colombia",
@@ -43253,7 +43256,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 87,
       "zafronix_label": "WC2026-087",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Canadá-Marruecos": {
       "local": "Canadá",
@@ -43289,7 +43292,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 91,
       "zafronix_label": "WC2026-091",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "México-Inglaterra": {
       "local": "México",
@@ -43301,7 +43304,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 92,
       "zafronix_label": "WC2026-092",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Portugal-España": {
       "local": "Portugal",
@@ -43313,7 +43316,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 93,
       "zafronix_label": "WC2026-093",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Estados Unidos-Bélgica": {
       "local": "Estados Unidos",
@@ -43325,7 +43328,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 94,
       "zafronix_label": "WC2026-094",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Argentina-Egipto": {
       "local": "Argentina",
@@ -43337,22 +43340,25 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 95,
       "zafronix_label": "WC2026-095",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     },
     "Suiza-Colombia": {
       "local": "Suiza",
       "visitante": "Colombia",
       "goles_local": 0,
       "goles_visitante": 0,
-      "winner": null,
-      "penalties": null,
+      "winner": "Suiza",
+      "penalties": {
+        "home": 4,
+        "away": 3
+      },
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 96,
       "zafronix_label": "WC2026-096",
-      "zafronix_as_of": "2026-07-07T22:30:00.886Z"
+      "zafronix_as_of": "2026-07-08T06:30:01.092Z"
     }
   },
-  "updated_at": "2026-07-07T22:30:28+00:00",
+  "updated_at": "2026-07-08T06:30:30+00:00",
   "actual_results_source": "zafronix",
   "standings": [
     {
@@ -45570,6 +45576,12 @@
           "home": "Noruega",
           "away": "Inglaterra",
           "played": false
+        },
+        "100": {
+          "jornada": "Cuartos",
+          "home": "Argentina",
+          "away": "Suiza",
+          "played": false
         }
       },
       "octavos_prediction_order_to_match_no": {
@@ -46104,8 +46116,11 @@
           "actual_resultado": "0-0",
           "actual_signo": "X",
           "actual_source": "https://api.zafronix.com/live-feed/predictions",
-          "actual_winner": null,
-          "actual_penalties": null
+          "actual_winner": "Suiza",
+          "actual_penalties": {
+            "home": 4,
+            "away": 3
+          }
         }
       ],
       "note": "Puntos actuales de eliminatorias: equipos que alcanzan la siguiente ronda, signo y resultado exacto cuando el cruce del participante coincide con el cruce real."
