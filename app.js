@@ -184,8 +184,18 @@ function currentDisputedInfo() {
   const completedGroups = Object.keys(state.data.scoring?.group_positions_current?.completed_group_positions || {}).length;
   const qualifiedTeams = (state.data.scoring?.round_of_32_qualification_current?.qualified_teams || []).length;
   const r32Matchups = Object.keys(state.data.scoring?.round_of_32_matchups_current?.matchups || {}).length;
-  const knockoutMatchups = Object.keys(state.data.scoring?.knockout_matchups_current?.matchups || {}).length;
-  const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4 + r32Matchups * 2;
+  const knockoutMatchupsByRound = Object.values(state.data.scoring?.knockout_matchups_current?.matchups || {})
+    .reduce((acc, match) => {
+      acc[match.jornada] = Number(acc[match.jornada] || 0) + 1;
+      return acc;
+    }, {});
+  const knockoutMatchups = Object.values(knockoutMatchupsByRound).reduce((sum, count) => sum + Number(count || 0), 0);
+  const knockoutMatchupPoints = Object.entries(knockoutMatchupsByRound)
+    .reduce((sum, [jornada, count]) => {
+      const points = Number(state.data.scoring?.knockout_matchups_current?.exact_matchup_by_round?.[jornada] || 0);
+      return sum + (Number(count || 0) * points);
+    }, 0);
+  const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4 + r32Matchups * 2 + knockoutMatchupPoints;
   const totalTournament = 1323;
   return {
     playedGroupMatches,
@@ -194,9 +204,31 @@ function currentDisputedInfo() {
     qualifiedTeams,
     r32Matchups,
     knockoutMatchups,
+    knockoutMatchupsByRound,
+    knockoutMatchupPoints,
     disputed,
     percent: totalTournament ? `${((disputed * 100) / totalTournament).toFixed(2).replace('.', ',')}%` : '',
   };
+}
+
+const AUDIT_KNOCKOUT_ROUNDS = [
+  { key: 'octavos', label: 'Octavos', jornada: 'Octavos' },
+  { key: 'cuartos', label: 'Cuartos', jornada: 'Cuartos' },
+  { key: 'semis', label: 'Semis', jornada: 'Semifinales' },
+  { key: 'tercero', label: '3º/4º', jornada: '3º/4º puesto' },
+  { key: 'final', label: 'Final', jornada: 'Final' },
+];
+
+function exactKnockoutMatchupsByRound(row) {
+  const matchups = state.data.scoring?.knockout_matchups_current?.matchups || {};
+  const counts = Object.fromEntries(AUDIT_KNOCKOUT_ROUNDS.map((round) => [round.key, 0]));
+  (row.matched_knockout_matchups || []).forEach((entry) => {
+    const matchNo = String(entry).split(':')[0];
+    const jornada = matchups[matchNo]?.jornada;
+    const round = AUDIT_KNOCKOUT_ROUNDS.find((item) => item.jornada === jornada);
+    if (round) counts[round.key] += 1;
+  });
+  return counts;
 }
 
 function renderScoreAuditTable() {
@@ -207,6 +239,10 @@ function renderScoreAuditTable() {
   const rows = standings.map((row) => {
     const posClass = row.position <= 3 ? `podium podium-${row.position}` : '';
     const selectedClass = row.persona === state.person ? 'selected-audit' : '';
+    const knockoutExact = exactKnockoutMatchupsByRound(row);
+    const knockoutCells = AUDIT_KNOCKOUT_ROUNDS
+      .map((round) => `<td>${Number(knockoutExact[round.key] || 0)}</td>`)
+      .join('');
     return `
       <tr class="${posClass} ${selectedClass}" data-person="${escapeHtml(row.persona)}">
         <td class="audit-pos">${row.position}</td>
@@ -219,7 +255,8 @@ function renderScoreAuditTable() {
         <td>${Number(row.hits_group_positions || 0)}</td>
         <td>${pct(row.hits_group_positions, info.completedPositions)}</td>
         <td>${Number(row.hits_qualified_r32 || 0)}</td>
-        <td>${Number(row.hits_r32_matchups || 0) + Number(row.hits_knockout_matchups || 0)}</td>
+        <td>${Number(row.hits_r32_matchups || 0)}</td>
+        ${knockoutCells}
       </tr>
     `;
   }).join('');
@@ -231,6 +268,7 @@ function renderScoreAuditTable() {
           <th>${info.percent}</th>
           <th colspan="6">Fase de Grupos</th>
           <th colspan="2">1/16</th>
+          <th colspan="${AUDIT_KNOCKOUT_ROUNDS.length}">Cruces exactos eliminatorias</th>
         </tr>
         <tr>
           <th>POS</th>
@@ -243,12 +281,13 @@ function renderScoreAuditTable() {
           <th>Pos.<br>Exacta</th>
           <th>%</th>
           <th>Eq.<br>Clasif</th>
-          <th>Cruces<br>exactos</th>
+          <th>1/16<br>cruces</th>
+          ${AUDIT_KNOCKOUT_ROUNDS.map((round) => `<th>${round.label}<br>cruces</th>`).join('')}
         </tr>
       </thead>
       <tbody>${rows}</tbody>
     </table>
-    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16, ${info.r32Matchups} cruces definidos de 1/16 y ${info.knockoutMatchups} cruces definidos de eliminatorias posteriores.</p>
+    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16, ${info.r32Matchups} cruces definidos de 1/16 y ${info.knockoutMatchups} cruces definidos de eliminatorias posteriores (${info.knockoutMatchupPoints} pts de partido exacto).</p>
   `;
   mount.querySelectorAll('tbody tr').forEach((row) => {
     row.addEventListener('click', () => {
