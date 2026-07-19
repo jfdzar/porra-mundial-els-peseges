@@ -822,7 +822,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 92,
     "zafronix_label": "WC2026-092",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Portugal-España": {
     "local": "Portugal",
@@ -834,7 +834,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 93,
     "zafronix_label": "WC2026-093",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Estados Unidos-Bélgica": {
     "local": "Estados Unidos",
@@ -846,7 +846,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 94,
     "zafronix_label": "WC2026-094",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Argentina-Egipto": {
     "local": "Argentina",
@@ -858,7 +858,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 95,
     "zafronix_label": "WC2026-095",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Suiza-Colombia": {
     "local": "Suiza",
@@ -873,7 +873,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 96,
     "zafronix_label": "WC2026-096",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Francia-Marruecos": {
     "local": "Francia",
@@ -885,7 +885,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 97,
     "zafronix_label": "WC2026-097",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "España-Bélgica": {
     "local": "España",
@@ -897,7 +897,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 98,
     "zafronix_label": "WC2026-098",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Noruega-Inglaterra": {
     "local": "Noruega",
@@ -909,7 +909,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 99,
     "zafronix_label": "WC2026-099",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Argentina-Suiza": {
     "local": "Argentina",
@@ -921,7 +921,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 100,
     "zafronix_label": "WC2026-100",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Francia-España": {
     "local": "Francia",
@@ -933,7 +933,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 101,
     "zafronix_label": "WC2026-101",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Inglaterra-Argentina": {
     "local": "Inglaterra",
@@ -945,7 +945,7 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 102,
     "zafronix_label": "WC2026-102",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   },
   "Francia-Inglaterra": {
     "local": "Francia",
@@ -957,6 +957,18 @@
     "source": "https://api.zafronix.com/live-feed/predictions",
     "zafronix_match_no": 103,
     "zafronix_label": "WC2026-103",
-    "zafronix_as_of": "2026-07-19T06:30:24.283Z"
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
+  },
+  "España-Argentina": {
+    "local": "España",
+    "visitante": "Argentina",
+    "goles_local": 1,
+    "goles_visitante": 0,
+    "winner": "España",
+    "penalties": null,
+    "source": "https://api.zafronix.com/live-feed/predictions",
+    "zafronix_match_no": 104,
+    "zafronix_label": "WC2026-104",
+    "zafronix_as_of": "2026-07-19T22:30:27.908Z"
   }
 }
