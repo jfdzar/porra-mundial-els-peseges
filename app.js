@@ -195,7 +195,9 @@ function currentDisputedInfo() {
       const points = Number(state.data.scoring?.knockout_matchups_current?.exact_matchup_by_round?.[jornada] || 0);
       return sum + (Number(count || 0) * points);
     }, 0);
-  const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4 + r32Matchups * 2 + knockoutMatchupPoints;
+  const finalAwardPoints = Object.values(state.data.scoring?.final_awards_current?.points || {})
+    .reduce((sum, points) => sum + Number(points || 0), 0);
+  const disputed = playedGroupMatches * 6 + completedGroups * 4 * 2 + qualifiedTeams * 4 + r32Matchups * 2 + knockoutMatchupPoints + finalAwardPoints;
   const totalTournament = 1323;
   return {
     playedGroupMatches,
@@ -206,6 +208,7 @@ function currentDisputedInfo() {
     knockoutMatchups,
     knockoutMatchupsByRound,
     knockoutMatchupPoints,
+    finalAwardPoints,
     disputed,
     percent: totalTournament ? `${((disputed * 100) / totalTournament).toFixed(2).replace('.', ',')}%` : '',
   };
@@ -257,6 +260,9 @@ function renderScoreAuditTable() {
         <td>${Number(row.hits_qualified_r32 || 0)}</td>
         <td>${Number(row.hits_r32_matchups || 0)}</td>
         ${knockoutCells}
+        <td>${Number(row.points_final_classification || 0)}</td>
+        <td>${Number(row.points_bota_oro || 0)}</td>
+        <td>${Number(row.points_balon_oro || 0)}</td>
       </tr>
     `;
   }).join('');
@@ -269,6 +275,7 @@ function renderScoreAuditTable() {
           <th colspan="6">Fase de Grupos</th>
           <th colspan="2">1/16</th>
           <th colspan="${AUDIT_KNOCKOUT_ROUNDS.length}">Cruces exactos eliminatorias</th>
+          <th colspan="3">Premios finales</th>
         </tr>
         <tr>
           <th>POS</th>
@@ -283,11 +290,14 @@ function renderScoreAuditTable() {
           <th>Eq.<br>Clasif</th>
           <th>1/16<br>cruces</th>
           ${AUDIT_KNOCKOUT_ROUNDS.map((round) => `<th>${round.label}<br>cruces</th>`).join('')}
+          <th>Clasif.<br>final</th>
+          <th>Bota<br>Oro</th>
+          <th>Balón<br>Oro</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
     </table>
-    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16, ${info.r32Matchups} cruces definidos de 1/16 y ${info.knockoutMatchups} cruces definidos de eliminatorias posteriores (${info.knockoutMatchupPoints} pts de partido exacto).</p>
+    <p class="audit-footnote">Cálculo actual: ${info.playedGroupMatches} partidos de grupo jugados, ${info.completedGroups} grupos completos para posición exacta, ${info.qualifiedTeams} equipos clasificados a 1/16, ${info.r32Matchups} cruces definidos de 1/16, ${info.knockoutMatchups} cruces definidos de eliminatorias posteriores (${info.knockoutMatchupPoints} pts de partido exacto) y ${info.finalAwardPoints} pts de premios finales.</p>
   `;
   mount.querySelectorAll('tbody tr').forEach((row) => {
     row.addEventListener('click', () => {
@@ -308,7 +318,7 @@ function renderStandings() {
       <span class="rank">${medalMap[row.position] || `#${row.position}`}</span>
       <span class="standing-name">${escapeHtml(row.persona)}</span>
       <span class="standing-points">${row.points}<small>pts</small></span>
-      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_group_positions || 0) ? `<span class="standing-stat"><b>${row.points_group_positions}</b> pos.</span>` : ''}${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}${(Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)) ? `<span class="standing-stat"><b>${Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)}</b> cruces</span>` : ''}</span>
+      <span class="standing-details"><span class="standing-stat"><b>${row.hits_1x2}</b> 1X2</span><span class="standing-stat"><b>${row.hits_exact}</b> exactos</span>${Number(row.points_group_positions || 0) ? `<span class="standing-stat"><b>${row.points_group_positions}</b> pos.</span>` : ''}${Number(row.points_qualified_r32 || 0) ? `<span class="standing-stat"><b>${row.points_qualified_r32}</b> clasif.</span>` : ''}${(Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)) ? `<span class="standing-stat"><b>${Number(row.points_r32_matchups || 0) + Number(row.points_knockout_matchups || 0)}</b> cruces</span>` : ''}${Number(row.points_final_awards || 0) ? `<span class="standing-stat"><b>${Number(row.points_final_awards || 0)}</b> premios</span>` : ''}</span>
     </button>
   `).join('');
   document.querySelectorAll('.standing-row').forEach((button) => {

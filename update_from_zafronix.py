@@ -11,6 +11,8 @@ Zafronix English names to those names, merges actual scores, and calculates:
 - hit_exact: predicted exact score correctly
 """
 import json
+import re
+import unicodedata
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -91,6 +93,29 @@ def fetch_json(url):
 
 GROUP_POINTS_1X2 = 4
 GROUP_POINTS_EXACT = 2
+FINAL_AWARDS_POINTS = {
+    'campeon': 25,
+    'subcampeon': 20,
+    'tercero': 15,
+    'bota_oro': 15,
+    'balon_oro': 15,
+}
+FINAL_AWARDS_ACTUAL = {
+    'campeon': 'España',
+    'subcampeon': 'Argentina',
+    'tercero': 'Inglaterra',
+    'bota_oro': 'Kylian Mbappé',
+    'balon_oro': 'Rodri',
+}
+PLAYER_NORMALIZATION_ALIASES = {
+    'mbappe': 'kylian mbappe',
+    'mbape': 'kylian mbappe',
+    'kylian mbape': 'kylian mbappe',
+    'h kane': 'harry kane',
+    'haland': 'haaland',
+    'lamil yamal': 'lamine yamal',
+    'yamal': 'lamine yamal',
+}
 KNOCKOUT_SCORING = {
     'Dieciseisavos': {'next_round': 'Octavos', 'team': 7, 'sign': 3, 'exact': 2},
     'Octavos': {'next_round': 'Cuartos', 'team': 10, 'sign': 4, 'exact': 3},
@@ -131,6 +156,24 @@ def result_sign(home_goals, away_goals):
 
 def spanish_name(name):
     return TEAM_ALIASES.get(name, name)
+
+
+def normalize_text(value):
+    text = unicodedata.normalize('NFKD', str(value or ''))
+    text = ''.join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r'[^a-zA-Z0-9]+', ' ', text).strip().casefold()
+    return re.sub(r'\s+', ' ', text)
+
+
+def normalize_player(value):
+    key = normalize_text(value)
+    return PLAYER_NORMALIZATION_ALIASES.get(key, key)
+
+
+def final_award_matches(kind, predicted, actual):
+    if kind in {'bota_oro', 'balon_oro'}:
+        return normalize_player(predicted) == normalize_player(actual)
+    return normalize_text(predicted) == normalize_text(actual)
 
 
 def partido_key(home, away):
@@ -455,6 +498,48 @@ def collect_known_knockout_fixtures():
                 'source': ZAFRONIX_LIVE,
             }
     return fixtures
+
+
+def score_final_awards(data, standings):
+    summaries = data.get('knockout_summaries') or []
+    if not summaries:
+        return
+    for summary in summaries:
+        person = summary.get('persona')
+        if not person:
+            continue
+        row = standings.get(person)
+        if not row:
+            continue
+        row.setdefault('points_final_classification', 0)
+        row.setdefault('hits_final_classification', 0)
+        row.setdefault('points_bota_oro', 0)
+        row.setdefault('hit_bota_oro', 0)
+        row.setdefault('points_balon_oro', 0)
+        row.setdefault('hit_balon_oro', 0)
+        row.setdefault('points_final_awards', 0)
+        row.setdefault('matched_final_awards', [])
+        for kind, actual in FINAL_AWARDS_ACTUAL.items():
+            predicted = summary.get(kind)
+            points = int(FINAL_AWARDS_POINTS[kind])
+            hit = final_award_matches(kind, predicted, actual)
+            summary[f'actual_{kind}'] = actual
+            summary[f'hit_{kind}'] = bool(hit)
+            summary[f'points_{kind}'] = points if hit else 0
+            if not hit:
+                continue
+            row['points'] += points
+            row['points_final_awards'] += points
+            row['matched_final_awards'].append(f'{kind}:{actual}')
+            if kind in {'campeon', 'subcampeon', 'tercero'}:
+                row['points_final_classification'] += points
+                row['hits_final_classification'] += 1
+            elif kind == 'bota_oro':
+                row['points_bota_oro'] += points
+                row['hit_bota_oro'] = 1
+            elif kind == 'balon_oro':
+                row['points_balon_oro'] += points
+                row['hit_balon_oro'] = 1
 
 
 def merge_results(data, actual_results, known_knockout_fixtures=None):
@@ -790,6 +875,8 @@ def merge_results(data, actual_results, known_knockout_fixtures=None):
                 row['hits_exact'] += int(bool(prediction.get('hit_exact')))
                 row['matched_knockout_results'].append(f"{prediction.get('chronological_order')}:{prediction.get('partido')}")
 
+    score_final_awards(data, standings)
+
     ranking = sorted(standings.values(), key=lambda r: (-r['points'], -r['hits_exact'], -r['hits_1x2'], -r['hits_group_positions'], -r['hits_qualified_r32'], -r['hits_r32_matchups'], r['persona'].casefold()))
     for pos, row in enumerate(ranking, start=1):
         row['position'] = pos
@@ -835,6 +922,12 @@ def merge_results(data, actual_results, known_knockout_fixtures=None):
             'scoring': KNOCKOUT_SCORING,
             'played_matches': [m for m in data['matches'] if m.get('is_knockout') and m.get('played')],
             'note': 'Puntos actuales de eliminatorias: equipos que alcanzan la siguiente ronda, signo y resultado exacto cuando el cruce del participante coincide con el cruce real.'
+        },
+        'final_awards_current': {
+            'actual': FINAL_AWARDS_ACTUAL,
+            'points': FINAL_AWARDS_POINTS,
+            'source': 'FIFA/Olympics.com awards report, 2026-07-19',
+            'note': 'Premios finales: campeón 25, subcampeón 20, tercero 15, Bota de Oro 15 y Balón de Oro 15.'
         }
     }
 
