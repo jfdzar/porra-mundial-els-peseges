@@ -234,6 +234,16 @@ function exactKnockoutMatchupsByRound(row) {
   return counts;
 }
 
+function finalClassificationHits(row) {
+  return (row.matched_final_awards || [])
+    .filter((entry) => entry.startsWith('campeon:') || entry.startsWith('subcampeon:'))
+    .length;
+}
+
+function individualAwardHits(row) {
+  return Number(row.hit_bota_oro || 0) + Number(row.hit_balon_oro || 0);
+}
+
 function renderScoreAuditTable() {
   const mount = $('scoreAuditTable');
   if (!mount) return;
@@ -260,9 +270,9 @@ function renderScoreAuditTable() {
         <td>${Number(row.hits_qualified_r32 || 0)}</td>
         <td>${Number(row.hits_r32_matchups || 0)}</td>
         ${knockoutCells}
-        <td>${Number(row.points_final_classification || 0)}</td>
-        <td>${Number(row.points_bota_oro || 0)}</td>
-        <td>${Number(row.points_balon_oro || 0)}</td>
+        <td>${Number(row.hits_third_place_teams || 0)}</td>
+        <td>${finalClassificationHits(row)}</td>
+        <td>${individualAwardHits(row)}</td>
       </tr>
     `;
   }).join('');
@@ -275,7 +285,8 @@ function renderScoreAuditTable() {
           <th colspan="6">Fase de Grupos</th>
           <th colspan="2">1/16</th>
           <th colspan="${AUDIT_KNOCKOUT_ROUNDS.length}">Cruces exactos eliminatorias</th>
-          <th colspan="3">Premios finales</th>
+          <th colspan="2">Final y 3º4º</th>
+          <th colspan="1">Otros</th>
         </tr>
         <tr>
           <th>POS</th>
@@ -290,9 +301,9 @@ function renderScoreAuditTable() {
           <th>Eq.<br>Clasif</th>
           <th>1/16<br>cruces</th>
           ${AUDIT_KNOCKOUT_ROUNDS.map((round) => `<th>${round.label}<br>cruces</th>`).join('')}
-          <th>Clasif.<br>final</th>
-          <th>Bota<br>Oro</th>
-          <th>Balón<br>Oro</th>
+          <th>Eq.<br>3º4º</th>
+          <th>Eq.<br>Final</th>
+          <th>Premios<br>individuales</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>

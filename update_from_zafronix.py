@@ -825,6 +825,9 @@ def merge_results(data, actual_results, known_knockout_fixtures=None):
             row.setdefault('hits_knockout_1x2', 0)
             row.setdefault('hits_knockout_exact', 0)
             row.setdefault('matched_knockout_results', [])
+            row.setdefault('points_third_place_teams', 0)
+            row.setdefault('hits_third_place_teams', 0)
+            row.setdefault('matched_third_place_teams', [])
 
         predictions_by_person = {}
         for prediction in data['predictions']:
@@ -841,6 +844,9 @@ def merge_results(data, actual_results, known_knockout_fixtures=None):
                 winner = match['local'] if gl > gv else match['visitante']
             next_round = scoring.get('next_round')
             team_points = int(scoring.get('team', 0) or 0)
+            third_place_loser = None
+            if match.get('jornada') == 'Semifinales' and winner:
+                third_place_loser = match['visitante'] if winner == match['local'] else match['local']
             for person, person_predictions in predictions_by_person.items():
                 row = standings.get(person)
                 if not row:
@@ -858,6 +864,20 @@ def merge_results(data, actual_results, known_knockout_fixtures=None):
                         row['points_knockout_teams'] += team_points
                         row['points'] += team_points
                         row['matched_knockout_teams'].append(f"{next_round}:{winner}")
+                if third_place_loser:
+                    third_place_teams = {
+                        team
+                        for pr in person_predictions
+                        if pr.get('jornada') == '3º/4º puesto'
+                        for team in (pr.get('local'), pr.get('visitante'))
+                        if team
+                    }
+                    if third_place_loser in third_place_teams:
+                        row['hits_third_place_teams'] += 1
+                        row['points_third_place_teams'] += 15
+                        row['points_knockout_teams'] += 15
+                        row['points'] += 15
+                        row['matched_third_place_teams'].append(f"3º/4º puesto:{third_place_loser}")
 
         for prediction in data['predictions']:
             if not prediction.get('is_knockout') or not prediction.get('played'):

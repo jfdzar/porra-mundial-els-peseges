@@ -43340,7 +43340,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 95,
       "zafronix_label": "WC2026-095",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Suiza-Colombia": {
       "local": "Suiza",
@@ -43355,7 +43355,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 96,
       "zafronix_label": "WC2026-096",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Francia-Marruecos": {
       "local": "Francia",
@@ -43367,7 +43367,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 97,
       "zafronix_label": "WC2026-097",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "España-Bélgica": {
       "local": "España",
@@ -43379,7 +43379,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 98,
       "zafronix_label": "WC2026-098",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Noruega-Inglaterra": {
       "local": "Noruega",
@@ -43391,7 +43391,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 99,
       "zafronix_label": "WC2026-099",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Argentina-Suiza": {
       "local": "Argentina",
@@ -43403,7 +43403,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 100,
       "zafronix_label": "WC2026-100",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Francia-España": {
       "local": "Francia",
@@ -43415,7 +43415,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 101,
       "zafronix_label": "WC2026-101",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Inglaterra-Argentina": {
       "local": "Inglaterra",
@@ -43427,7 +43427,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 102,
       "zafronix_label": "WC2026-102",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "Francia-Inglaterra": {
       "local": "Francia",
@@ -43439,7 +43439,7 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 103,
       "zafronix_label": "WC2026-103",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     },
     "España-Argentina": {
       "local": "España",
@@ -43451,15 +43451,15 @@
       "source": "https://api.zafronix.com/live-feed/predictions",
       "zafronix_match_no": 104,
       "zafronix_label": "WC2026-104",
-      "zafronix_as_of": "2026-07-21T08:17:48.979Z"
+      "zafronix_as_of": "2026-07-21T08:31:34.910Z"
     }
   },
-  "updated_at": "2026-07-21T08:18:08+00:00",
+  "updated_at": "2026-07-21T08:31:36+00:00",
   "actual_results_source": "zafronix",
   "standings": [
     {
       "persona": "Raúl",
-      "points": 816,
+      "points": 831,
       "played": 72,
       "hits_1x2": 53,
       "hits_exact": 16,
@@ -43552,7 +43552,7 @@
         "101:Francia-España",
         "104:España-Argentina"
       ],
-      "points_knockout_teams": 236,
+      "points_knockout_teams": 251,
       "hits_knockout_teams": 24,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -43593,6 +43593,11 @@
         "101:Francia-España",
         "104:España-Argentina"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
       "points_final_classification": 45,
       "hits_final_classification": 2,
       "points_bota_oro": 15,
@@ -43610,7 +43615,7 @@
     },
     {
       "persona": "Havier",
-      "points": 767,
+      "points": 797,
       "played": 72,
       "hits_1x2": 49,
       "hits_exact": 11,
@@ -43697,7 +43702,7 @@
         "103:Francia-Inglaterra",
         "104:España-Argentina"
       ],
-      "points_knockout_teams": 251,
+      "points_knockout_teams": 281,
       "hits_knockout_teams": 25,
       "matched_knockout_teams": [
         "Octavos:Paraguay",
@@ -43742,6 +43747,12 @@
         "102:Inglaterra-Argentina",
         "104:España-Argentina"
       ],
+      "points_third_place_teams": 30,
+      "hits_third_place_teams": 2,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia",
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 45,
       "hits_final_classification": 2,
       "points_bota_oro": 15,
@@ -43758,7 +43769,7 @@
     },
     {
       "persona": "Narx",
-      "points": 722,
+      "points": 737,
       "played": 72,
       "hits_1x2": 55,
       "hits_exact": 13,
@@ -43854,7 +43865,7 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
-      "points_knockout_teams": 208,
+      "points_knockout_teams": 223,
       "hits_knockout_teams": 23,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -43896,6 +43907,11 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 15,
@@ -43911,7 +43927,7 @@
     },
     {
       "persona": "Dry Mouth",
-      "points": 699,
+      "points": 714,
       "played": 72,
       "hits_1x2": 57,
       "hits_exact": 10,
@@ -44000,7 +44016,7 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
-      "points_knockout_teams": 201,
+      "points_knockout_teams": 216,
       "hits_knockout_teams": 22,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -44041,6 +44057,11 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 15,
@@ -44056,7 +44077,7 @@
     },
     {
       "persona": "Marcos",
-      "points": 672,
+      "points": 702,
       "played": 72,
       "hits_1x2": 49,
       "hits_exact": 8,
@@ -44148,7 +44169,7 @@
         "101:Francia-España",
         "103:Francia-Inglaterra"
       ],
-      "points_knockout_teams": 206,
+      "points_knockout_teams": 236,
       "hits_knockout_teams": 22,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -44187,6 +44208,12 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
+      "points_third_place_teams": 30,
+      "hits_third_place_teams": 2,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia",
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 15,
@@ -44201,282 +44228,8 @@
       "position": 5
     },
     {
-      "persona": "Vicente Hernández Ruiz",
-      "points": 662,
-      "played": 72,
-      "hits_1x2": 49,
-      "hits_exact": 11,
-      "points_1x2": 172,
-      "points_exact": 18,
-      "points_group_positions": 66,
-      "hits_group_positions": 33,
-      "matched_group_positions": [
-        "A3:Corea del Sur",
-        "B1:Suiza",
-        "B2:Canadá",
-        "B3:Bosnia y Herzegovina",
-        "B4:Catar",
-        "C1:Brasil",
-        "C4:Haití",
-        "D1:Estados Unidos",
-        "D3:Paraguay",
-        "E1:Alemania",
-        "E2:Costa de Marfil",
-        "E3:Ecuador",
-        "E4:Curazao",
-        "F1:Países Bajos",
-        "F4:Túnez",
-        "G1:Bélgica",
-        "G4:Nueva Zelanda",
-        "H1:España",
-        "H4:Arabia Saudita",
-        "I1:Francia",
-        "I2:Noruega",
-        "I3:Senegal",
-        "I4:Irak",
-        "J1:Argentina",
-        "J2:Austria",
-        "J3:Argelia",
-        "J4:Jordania",
-        "K3:RD Congo",
-        "K4:Uzbekistán",
-        "L1:Inglaterra",
-        "L2:Croacia",
-        "L3:Ghana",
-        "L4:Panamá"
-      ],
-      "points_qualified_r32": 104,
-      "hits_qualified_r32": 26,
-      "matched_qualified_r32": [
-        "Alemania",
-        "Argelia",
-        "Argentina",
-        "Austria",
-        "Bosnia y Herzegovina",
-        "Brasil",
-        "Bélgica",
-        "Canadá",
-        "Colombia",
-        "Costa de Marfil",
-        "Croacia",
-        "Ecuador",
-        "Egipto",
-        "España",
-        "Estados Unidos",
-        "Francia",
-        "Ghana",
-        "Inglaterra",
-        "Japón",
-        "Marruecos",
-        "México",
-        "Noruega",
-        "Países Bajos",
-        "Portugal",
-        "Suecia",
-        "Suiza"
-      ],
-      "points_r32_matchups": 6,
-      "hits_r32_matchups": 3,
-      "matched_r32_matchups": [
-        "78:Costa de Marfil-Noruega",
-        "81:Estados Unidos-Bosnia y Herzegovina",
-        "84:España-Austria"
-      ],
-      "points_knockout_matchups": 20,
-      "hits_knockout_matchups": 4,
-      "matched_knockout_matchups": [
-        "91:Brasil-Noruega",
-        "94:Estados Unidos-Bélgica",
-        "98:España-Bélgica",
-        "101:Francia-España"
-      ],
-      "points_knockout_teams": 199,
-      "hits_knockout_teams": 21,
-      "matched_knockout_teams": [
-        "Octavos:Brasil",
-        "Octavos:Francia",
-        "Octavos:Noruega",
-        "Octavos:México",
-        "Octavos:Inglaterra",
-        "Octavos:Estados Unidos",
-        "Octavos:Bélgica",
-        "Octavos:Portugal",
-        "Octavos:España",
-        "Octavos:Suiza",
-        "Octavos:Argentina",
-        "Octavos:Colombia",
-        "Cuartos:Francia",
-        "Cuartos:Inglaterra",
-        "Cuartos:España",
-        "Cuartos:Bélgica",
-        "Cuartos:Argentina",
-        "Semifinales:Francia",
-        "Semifinales:España",
-        "Semifinales:Inglaterra",
-        "Final:España"
-      ],
-      "points_knockout_results": 37,
-      "hits_knockout_1x2": 6,
-      "hits_knockout_exact": 2,
-      "matched_knockout_results": [
-        "77:Costa de Marfil-Noruega",
-        "82:Estados Unidos-Bosnia y Herzegovina",
-        "83:España-Austria",
-        "94:Estados Unidos-Bélgica",
-        "98:España-Bélgica",
-        "101:Francia-España"
-      ],
-      "points_final_classification": 25,
-      "hits_final_classification": 1,
-      "points_bota_oro": 15,
-      "hit_bota_oro": 1,
-      "points_balon_oro": 0,
-      "hit_balon_oro": 0,
-      "points_final_awards": 40,
-      "matched_final_awards": [
-        "campeon:España",
-        "bota_oro:Kylian Mbappé"
-      ],
-      "position": 6
-    },
-    {
-      "persona": "Fiti",
-      "points": 654,
-      "played": 72,
-      "hits_1x2": 53,
-      "hits_exact": 8,
-      "points_1x2": 188,
-      "points_exact": 16,
-      "points_group_positions": 56,
-      "hits_group_positions": 28,
-      "matched_group_positions": [
-        "A1:México",
-        "A3:Corea del Sur",
-        "C1:Brasil",
-        "C2:Marruecos",
-        "C3:Escocia",
-        "C4:Haití",
-        "D3:Paraguay",
-        "E1:Alemania",
-        "E4:Curazao",
-        "F3:Suecia",
-        "F4:Túnez",
-        "G1:Bélgica",
-        "G2:Egipto",
-        "G3:Irán",
-        "G4:Nueva Zelanda",
-        "H1:España",
-        "I1:Francia",
-        "I2:Noruega",
-        "I3:Senegal",
-        "I4:Irak",
-        "J1:Argentina",
-        "J4:Jordania",
-        "K3:RD Congo",
-        "K4:Uzbekistán",
-        "L1:Inglaterra",
-        "L2:Croacia",
-        "L3:Ghana",
-        "L4:Panamá"
-      ],
-      "points_qualified_r32": 108,
-      "hits_qualified_r32": 27,
-      "matched_qualified_r32": [
-        "Alemania",
-        "Argelia",
-        "Argentina",
-        "Austria",
-        "Bosnia y Herzegovina",
-        "Brasil",
-        "Bélgica",
-        "Colombia",
-        "Costa de Marfil",
-        "Croacia",
-        "Ecuador",
-        "Egipto",
-        "España",
-        "Estados Unidos",
-        "Francia",
-        "Ghana",
-        "Inglaterra",
-        "Japón",
-        "Marruecos",
-        "México",
-        "Noruega",
-        "Paraguay",
-        "Países Bajos",
-        "Portugal",
-        "Senegal",
-        "Suecia",
-        "Suiza"
-      ],
-      "points_r32_matchups": 4,
-      "hits_r32_matchups": 2,
-      "matched_r32_matchups": [
-        "74:Alemania-Paraguay",
-        "77:Francia-Suecia"
-      ],
-      "points_knockout_matchups": 29,
-      "hits_knockout_matchups": 6,
-      "matched_knockout_matchups": [
-        "91:Brasil-Noruega",
-        "92:México-Inglaterra",
-        "95:Argentina-Egipto",
-        "97:Francia-Marruecos",
-        "98:España-Bélgica",
-        "101:Francia-España"
-      ],
-      "points_knockout_teams": 194,
-      "hits_knockout_teams": 21,
-      "matched_knockout_teams": [
-        "Octavos:Marruecos",
-        "Octavos:Brasil",
-        "Octavos:Francia",
-        "Octavos:Noruega",
-        "Octavos:México",
-        "Octavos:Inglaterra",
-        "Octavos:Bélgica",
-        "Octavos:Portugal",
-        "Octavos:España",
-        "Octavos:Suiza",
-        "Octavos:Argentina",
-        "Octavos:Egipto",
-        "Cuartos:Francia",
-        "Cuartos:Marruecos",
-        "Cuartos:Inglaterra",
-        "Cuartos:España",
-        "Cuartos:Bélgica",
-        "Cuartos:Argentina",
-        "Semifinales:Francia",
-        "Semifinales:España",
-        "Final:España"
-      ],
-      "points_knockout_results": 34,
-      "hits_knockout_1x2": 6,
-      "hits_knockout_exact": 0,
-      "matched_knockout_results": [
-        "78:Francia-Suecia",
-        "92:México-Inglaterra",
-        "95:Argentina-Egipto",
-        "97:Francia-Marruecos",
-        "98:España-Bélgica",
-        "101:Francia-España"
-      ],
-      "points_final_classification": 25,
-      "hits_final_classification": 1,
-      "points_bota_oro": 0,
-      "hit_bota_oro": 0,
-      "points_balon_oro": 0,
-      "hit_balon_oro": 0,
-      "points_final_awards": 25,
-      "matched_final_awards": [
-        "campeon:España"
-      ],
-      "position": 7
-    },
-    {
       "persona": "Pepunto",
-      "points": 651,
+      "points": 681,
       "played": 72,
       "hits_1x2": 45,
       "hits_exact": 9,
@@ -44564,7 +44317,7 @@
         "101:Francia-España",
         "103:Francia-Inglaterra"
       ],
-      "points_knockout_teams": 199,
+      "points_knockout_teams": 229,
       "hits_knockout_teams": 21,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -44599,6 +44352,12 @@
         "98:España-Bélgica",
         "99:Noruega-Inglaterra"
       ],
+      "points_third_place_teams": 30,
+      "hits_third_place_teams": 2,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia",
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 15,
@@ -44610,11 +44369,11 @@
         "campeon:España",
         "bota_oro:Kylian Mbappé"
       ],
-      "position": 8
+      "position": 6
     },
     {
       "persona": "Victor",
-      "points": 648,
+      "points": 678,
       "played": 72,
       "hits_1x2": 49,
       "hits_exact": 9,
@@ -44695,7 +44454,7 @@
         "101:Francia-España",
         "103:Francia-Inglaterra"
       ],
-      "points_knockout_teams": 199,
+      "points_knockout_teams": 229,
       "hits_knockout_teams": 21,
       "matched_knockout_teams": [
         "Octavos:Paraguay",
@@ -44730,6 +44489,12 @@
         "97:Francia-Marruecos",
         "103:Francia-Inglaterra"
       ],
+      "points_third_place_teams": 30,
+      "hits_third_place_teams": 2,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia",
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 40,
       "hits_final_classification": 2,
       "points_bota_oro": 0,
@@ -44741,11 +44506,295 @@
         "campeon:España",
         "tercero:Inglaterra"
       ],
+      "position": 7
+    },
+    {
+      "persona": "Vicente Hernández Ruiz",
+      "points": 677,
+      "played": 72,
+      "hits_1x2": 49,
+      "hits_exact": 11,
+      "points_1x2": 172,
+      "points_exact": 18,
+      "points_group_positions": 66,
+      "hits_group_positions": 33,
+      "matched_group_positions": [
+        "A3:Corea del Sur",
+        "B1:Suiza",
+        "B2:Canadá",
+        "B3:Bosnia y Herzegovina",
+        "B4:Catar",
+        "C1:Brasil",
+        "C4:Haití",
+        "D1:Estados Unidos",
+        "D3:Paraguay",
+        "E1:Alemania",
+        "E2:Costa de Marfil",
+        "E3:Ecuador",
+        "E4:Curazao",
+        "F1:Países Bajos",
+        "F4:Túnez",
+        "G1:Bélgica",
+        "G4:Nueva Zelanda",
+        "H1:España",
+        "H4:Arabia Saudita",
+        "I1:Francia",
+        "I2:Noruega",
+        "I3:Senegal",
+        "I4:Irak",
+        "J1:Argentina",
+        "J2:Austria",
+        "J3:Argelia",
+        "J4:Jordania",
+        "K3:RD Congo",
+        "K4:Uzbekistán",
+        "L1:Inglaterra",
+        "L2:Croacia",
+        "L3:Ghana",
+        "L4:Panamá"
+      ],
+      "points_qualified_r32": 104,
+      "hits_qualified_r32": 26,
+      "matched_qualified_r32": [
+        "Alemania",
+        "Argelia",
+        "Argentina",
+        "Austria",
+        "Bosnia y Herzegovina",
+        "Brasil",
+        "Bélgica",
+        "Canadá",
+        "Colombia",
+        "Costa de Marfil",
+        "Croacia",
+        "Ecuador",
+        "Egipto",
+        "España",
+        "Estados Unidos",
+        "Francia",
+        "Ghana",
+        "Inglaterra",
+        "Japón",
+        "Marruecos",
+        "México",
+        "Noruega",
+        "Países Bajos",
+        "Portugal",
+        "Suecia",
+        "Suiza"
+      ],
+      "points_r32_matchups": 6,
+      "hits_r32_matchups": 3,
+      "matched_r32_matchups": [
+        "78:Costa de Marfil-Noruega",
+        "81:Estados Unidos-Bosnia y Herzegovina",
+        "84:España-Austria"
+      ],
+      "points_knockout_matchups": 20,
+      "hits_knockout_matchups": 4,
+      "matched_knockout_matchups": [
+        "91:Brasil-Noruega",
+        "94:Estados Unidos-Bélgica",
+        "98:España-Bélgica",
+        "101:Francia-España"
+      ],
+      "points_knockout_teams": 214,
+      "hits_knockout_teams": 21,
+      "matched_knockout_teams": [
+        "Octavos:Brasil",
+        "Octavos:Francia",
+        "Octavos:Noruega",
+        "Octavos:México",
+        "Octavos:Inglaterra",
+        "Octavos:Estados Unidos",
+        "Octavos:Bélgica",
+        "Octavos:Portugal",
+        "Octavos:España",
+        "Octavos:Suiza",
+        "Octavos:Argentina",
+        "Octavos:Colombia",
+        "Cuartos:Francia",
+        "Cuartos:Inglaterra",
+        "Cuartos:España",
+        "Cuartos:Bélgica",
+        "Cuartos:Argentina",
+        "Semifinales:Francia",
+        "Semifinales:España",
+        "Semifinales:Inglaterra",
+        "Final:España"
+      ],
+      "points_knockout_results": 37,
+      "hits_knockout_1x2": 6,
+      "hits_knockout_exact": 2,
+      "matched_knockout_results": [
+        "77:Costa de Marfil-Noruega",
+        "82:Estados Unidos-Bosnia y Herzegovina",
+        "83:España-Austria",
+        "94:Estados Unidos-Bélgica",
+        "98:España-Bélgica",
+        "101:Francia-España"
+      ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
+      "points_final_classification": 25,
+      "hits_final_classification": 1,
+      "points_bota_oro": 15,
+      "hit_bota_oro": 1,
+      "points_balon_oro": 0,
+      "hit_balon_oro": 0,
+      "points_final_awards": 40,
+      "matched_final_awards": [
+        "campeon:España",
+        "bota_oro:Kylian Mbappé"
+      ],
+      "position": 8
+    },
+    {
+      "persona": "Fiti",
+      "points": 669,
+      "played": 72,
+      "hits_1x2": 53,
+      "hits_exact": 8,
+      "points_1x2": 188,
+      "points_exact": 16,
+      "points_group_positions": 56,
+      "hits_group_positions": 28,
+      "matched_group_positions": [
+        "A1:México",
+        "A3:Corea del Sur",
+        "C1:Brasil",
+        "C2:Marruecos",
+        "C3:Escocia",
+        "C4:Haití",
+        "D3:Paraguay",
+        "E1:Alemania",
+        "E4:Curazao",
+        "F3:Suecia",
+        "F4:Túnez",
+        "G1:Bélgica",
+        "G2:Egipto",
+        "G3:Irán",
+        "G4:Nueva Zelanda",
+        "H1:España",
+        "I1:Francia",
+        "I2:Noruega",
+        "I3:Senegal",
+        "I4:Irak",
+        "J1:Argentina",
+        "J4:Jordania",
+        "K3:RD Congo",
+        "K4:Uzbekistán",
+        "L1:Inglaterra",
+        "L2:Croacia",
+        "L3:Ghana",
+        "L4:Panamá"
+      ],
+      "points_qualified_r32": 108,
+      "hits_qualified_r32": 27,
+      "matched_qualified_r32": [
+        "Alemania",
+        "Argelia",
+        "Argentina",
+        "Austria",
+        "Bosnia y Herzegovina",
+        "Brasil",
+        "Bélgica",
+        "Colombia",
+        "Costa de Marfil",
+        "Croacia",
+        "Ecuador",
+        "Egipto",
+        "España",
+        "Estados Unidos",
+        "Francia",
+        "Ghana",
+        "Inglaterra",
+        "Japón",
+        "Marruecos",
+        "México",
+        "Noruega",
+        "Paraguay",
+        "Países Bajos",
+        "Portugal",
+        "Senegal",
+        "Suecia",
+        "Suiza"
+      ],
+      "points_r32_matchups": 4,
+      "hits_r32_matchups": 2,
+      "matched_r32_matchups": [
+        "74:Alemania-Paraguay",
+        "77:Francia-Suecia"
+      ],
+      "points_knockout_matchups": 29,
+      "hits_knockout_matchups": 6,
+      "matched_knockout_matchups": [
+        "91:Brasil-Noruega",
+        "92:México-Inglaterra",
+        "95:Argentina-Egipto",
+        "97:Francia-Marruecos",
+        "98:España-Bélgica",
+        "101:Francia-España"
+      ],
+      "points_knockout_teams": 209,
+      "hits_knockout_teams": 21,
+      "matched_knockout_teams": [
+        "Octavos:Marruecos",
+        "Octavos:Brasil",
+        "Octavos:Francia",
+        "Octavos:Noruega",
+        "Octavos:México",
+        "Octavos:Inglaterra",
+        "Octavos:Bélgica",
+        "Octavos:Portugal",
+        "Octavos:España",
+        "Octavos:Suiza",
+        "Octavos:Argentina",
+        "Octavos:Egipto",
+        "Cuartos:Francia",
+        "Cuartos:Marruecos",
+        "Cuartos:Inglaterra",
+        "Cuartos:España",
+        "Cuartos:Bélgica",
+        "Cuartos:Argentina",
+        "Semifinales:Francia",
+        "Semifinales:España",
+        "Final:España"
+      ],
+      "points_knockout_results": 34,
+      "hits_knockout_1x2": 6,
+      "hits_knockout_exact": 0,
+      "matched_knockout_results": [
+        "78:Francia-Suecia",
+        "92:México-Inglaterra",
+        "95:Argentina-Egipto",
+        "97:Francia-Marruecos",
+        "98:España-Bélgica",
+        "101:Francia-España"
+      ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
+      "points_final_classification": 25,
+      "hits_final_classification": 1,
+      "points_bota_oro": 0,
+      "hit_bota_oro": 0,
+      "points_balon_oro": 0,
+      "hit_balon_oro": 0,
+      "points_final_awards": 25,
+      "matched_final_awards": [
+        "campeon:España"
+      ],
       "position": 9
     },
     {
       "persona": "Manu",
-      "points": 622,
+      "points": 637,
       "played": 72,
       "hits_1x2": 46,
       "hits_exact": 11,
@@ -44825,7 +44874,7 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
-      "points_knockout_teams": 194,
+      "points_knockout_teams": 209,
       "hits_knockout_teams": 21,
       "matched_knockout_teams": [
         "Octavos:Paraguay",
@@ -44860,6 +44909,11 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 0,
@@ -44874,7 +44928,7 @@
     },
     {
       "persona": "Juan",
-      "points": 606,
+      "points": 621,
       "played": 72,
       "hits_1x2": 52,
       "hits_exact": 12,
@@ -44956,7 +45010,7 @@
         "94:Estados Unidos-Bélgica",
         "98:España-Bélgica"
       ],
-      "points_knockout_teams": 170,
+      "points_knockout_teams": 185,
       "hits_knockout_teams": 18,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -44988,6 +45042,11 @@
         "94:Estados Unidos-Bélgica",
         "98:España-Bélgica"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 0,
@@ -45002,7 +45061,7 @@
     },
     {
       "persona": "Hector",
-      "points": 598,
+      "points": 613,
       "played": 72,
       "hits_1x2": 43,
       "hits_exact": 12,
@@ -45095,7 +45154,7 @@
         "96:Suiza-Colombia",
         "101:Francia-España"
       ],
-      "points_knockout_teams": 174,
+      "points_knockout_teams": 189,
       "hits_knockout_teams": 19,
       "matched_knockout_teams": [
         "Octavos:Brasil",
@@ -45129,6 +45188,11 @@
         "88:Colombia-Ghana",
         "92:México-Inglaterra",
         "101:Francia-España"
+      ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
       ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
@@ -45272,6 +45336,9 @@
         "97:Francia-Marruecos",
         "98:España-Bélgica"
       ],
+      "points_third_place_teams": 0,
+      "hits_third_place_teams": 0,
+      "matched_third_place_teams": [],
       "points_final_classification": 0,
       "hits_final_classification": 0,
       "points_bota_oro": 0,
@@ -45284,7 +45351,7 @@
     },
     {
       "persona": "Dj Pino",
-      "points": 551,
+      "points": 566,
       "played": 72,
       "hits_1x2": 43,
       "hits_exact": 6,
@@ -45366,7 +45433,7 @@
       "matched_knockout_matchups": [
         "92:México-Inglaterra"
       ],
-      "points_knockout_teams": 170,
+      "points_knockout_teams": 185,
       "hits_knockout_teams": 18,
       "matched_knockout_teams": [
         "Octavos:Canadá",
@@ -45397,6 +45464,11 @@
         "83:España-Austria",
         "92:México-Inglaterra"
       ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Inglaterra"
+      ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
       "points_bota_oro": 0,
@@ -45411,7 +45483,7 @@
     },
     {
       "persona": "Alex ml",
-      "points": 551,
+      "points": 566,
       "played": 72,
       "hits_1x2": 39,
       "hits_exact": 5,
@@ -45492,7 +45564,7 @@
         "98:España-Bélgica",
         "101:Francia-España"
       ],
-      "points_knockout_teams": 153,
+      "points_knockout_teams": 168,
       "hits_knockout_teams": 16,
       "matched_knockout_teams": [
         "Octavos:Brasil",
@@ -45519,6 +45591,11 @@
         "83:España-Austria",
         "98:España-Bélgica",
         "101:Francia-España"
+      ],
+      "points_third_place_teams": 15,
+      "hits_third_place_teams": 1,
+      "matched_third_place_teams": [
+        "3º/4º puesto:Francia"
       ],
       "points_final_classification": 25,
       "hits_final_classification": 1,
